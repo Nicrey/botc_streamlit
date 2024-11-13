@@ -1,5 +1,5 @@
 __pycache__/
-stats/game_Data.csv
-stats/player_role_data.csv
+
 player_passwords.json
-data/
+
+.streamlit/

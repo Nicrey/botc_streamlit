@@ -1,0 +1,394 @@
+[
+{
+    "ability": "Du weißt nicht, dass du der Trunkenbold bist. Du glaubst, dass du ein Bürger-Charakter bist, aber das stimmt nicht.",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_drunk",
+    "image": "https://wiki.bloodontheclocktower.com/images/4/4a/Icon_drunk.png",
+    "name": "Trunkenbold",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "remindersGlobal": [
+      "Betrunken"
+    ],
+    "setup": true,
+    "special": [
+      {
+          "type": "reveal",
+          "name": "replace-character"
+      },
+      {
+          "type": "selection",
+          "name": "bag-disabled"
+      }
+    ],
+    "team": "outsider"
+  },
+
+  {
+    "ability": "Du denkst fälschlicherweise, dass du der Dämon bist. Der Dämon weiß, wer du bist & wen du in der Nacht gewählt hast.",
+    "edition": "bmr",
+    "firstNight": 7,
+    "firstNightReminder": "Bei 7 oder mehr Spielern: Zeige dem Wahnisnnigen  die Anzahl an falschen 'Schergen', die im Spiel sind.Wenn der Dämon, den der Wahnsinnige sieht ein Dämon ist, der in der Nacht erwacht: Erlaube dem Wahnsinnigen Dämonenaktionen durchzuführen. Platziere den 'Attacke' Marker. Wenn der Wahnsinnige einen Spieler auswählt: Wecke den Dämon. Zeige ihm den 'Attackiere' Marker, dann zeige auf jeden vom Wahnsinnigen markierten Spieler. Entferne die Attacke Marker des Wahnsinnigen.",
+    "id": "de_DE_lunatic",
+    "image": "https://wiki.bloodontheclocktower.com/images/6/64/Icon_lunatic.png",
+    "name": "Verrückte",
+    "otherNight": 21,
+    "otherNightReminder": "Erlaube dem Wahnsinnigen Dämonenaktionen durchzuführen. Platziere den 'Attacke' Marker. Wenn der Wahnsinnige einen Spieler auswählt: Wecke den Dämon. Zeige ihm den 'Attackiere' Marker, dann zeige auf jeden vom Wahnsinnigen markierten Spieler. Entferne die Attacke Marker des Wahnsinnigen.",
+    "reminders": [
+      "Angriff 1",
+      "Angriff 2",
+      "Angriff 3",
+      "Scherge", 
+      "Scherge",
+      "Scherge"
+    ],
+    "setup": false,
+    "team": "outsider",
+    "jinxes": [
+      {
+       "id": "de_DE_mathematician", "reason": "Wenn der Dämon ein anderes Ziel wählt, als der Wahnsinnige, zählt das für den Mathematiker." 
+      }
+    ]
+  },
+  {
+    "ability": "Jede Nacht ist der 1. Spieler, der dich mit seiner Fähigkeit wählt, bis zur Abenddämmerung betrunken. Du wechselst zu seiner Fraktion.",
+    "edition": "bmr",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_goon",
+    "image": "https://wiki.bloodontheclocktower.com/images/6/6f/Icon_goon.png",
+    "name": "Schläger",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "Betrunken"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+  
+  {
+    "ability": "Wenn du erfährst, dass du gestorben bist, wähle öffentlich 1 lebendigen Spieler. Falls er böse ist, verliert dein Team.",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_klutz",
+    "image": "https://wiki.bloodontheclocktower.com/images/b/bc/Icon_klutz.png",
+    "name": "Tollpatsch",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "outsider"
+  },
+
+
+  {
+    "ability": "Du erscheinst möglicherweise als Böse & als Scherge oder Dämon, sogar wenn du tot bist.",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_recluse",
+    "image": "https://wiki.bloodontheclocktower.com/images/6/60/Icon_recluse.png",
+    "name": "Einsiedler",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "outsider"
+  },
+
+  
+  
+  {
+    "ability": "Wöhle jede Nacht 1 Spieler (nicht dich selbst): Morgen darfst du nur dann abstimmen, wenn er auch abstimmt.",
+    "edition": "tb",
+    "firstNight": 38,
+    "firstNightReminder": "Der Butler zeigt auf einen Spieler. Markiere diesen Spieler als 'Meister'.",
+    "id": "de_DE_butler",
+    "image": "https://wiki.bloodontheclocktower.com/images/1/19/Icon_butler.png",
+    "name": "Butler",
+    "otherNight": 55,
+    "otherNightReminder": "Der Butler zeigt auf einen Spieler. Markiere diesen Spieler als 'Meister'.",
+    "reminders": [
+      "Meister"
+    ],
+    "setup": false,
+    "team": "outsider",
+    "jinxes":[{"id": "de_DE_cannibal", "reason": "Wenn der Kannibale die Fähigkeit des Butlers erhält, erfährt er das."}]
+  },
+
+  {
+    "ability": "Falls du hingerichtet wirst, verliert dein Team.",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_saint",
+    "image": "https://wiki.bloodontheclocktower.com/images/c/c9/Icon_saint.png",
+    "name": "Heiliger",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "Wenn du erfährst, dass du gestorben bist, wähle öffentlich 1 lebendigen Spieler. Ist der Spieler gut, stirbt er in der Nacht.",
+    "edition": "bmr",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_moonchild",
+    "image": "https://wiki.bloodontheclocktower.com/images/d/dc/Icon_moonchild.png",
+    "name": "Mondkind",
+    "otherNight": 49,
+    "otherNightReminder": "Wenn das Mondkind am Tag stirbt und seine Fähigkeit einsetzt um einen Spieler auszuwählen: Ist dieser Spieler gut, stirbt er.",
+    "reminders": [
+      "Tot"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+
+  {
+    "ability": "Du könntest jederzeit sterben.",
+    "edition": "bmr",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_tinker",
+    "image": "https://wiki.bloodontheclocktower.com/images/9/98/Icon_tinker.png",
+    "name": "Bastler",
+    "otherNight": 48,
+    "otherNightReminder": "Der Erfinder könnte sterben.",
+    "reminders": [
+      "Tot"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+
+  {
+    "ability": "Wenn du stirbst, darf der Dämon in dieser Nacht 2 Spieler (keinen anderen Dämon) auswählen, die ihre Charaktere tauschen.",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_barber",
+    "image": "https://wiki.bloodontheclocktower.com/images/1/16/Icon_barber.png",
+    "name": "Barbier",
+    "otherNight": 40,
+    "otherNightReminder": "Wenn der Friseur heute gestorben ist: Wecke den Dämon. Zeige ihm die \"Dieser Charakter wählte dich aus\" Karte und dann die Karte des Friseurs. Der Dämon zeigt entweder ein \"Nein\" Signal mit dem Kopf oder zeigt auf zwei Spieler. Wenn er Spieler gewählt hat: Tausche die Charakterkarten. Wecke die Spieler. Zeige Ihnen: \"Du bist' und danach ihren neuen Charakter.",
+    "reminders": [
+      "Heute Tausch"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "Falls du \"besessen\" davon bist, ein Außenseiter zu sein, könntest du hingerichtet werden",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_mutant",
+    "image": "https://wiki.bloodontheclocktower.com/images/2/2e/Icon_mutant.png",
+    "name": "Mutant",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "Wenn du stirbst, ist 1 Spieler ab jetzt betrunken.",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_sweetheart",
+    "image": "https://wiki.bloodontheclocktower.com/images/6/6a/Icon_sweetheart.png",
+    "name": "Liebchen",
+    "otherNight": 41,
+    "otherNightReminder": "Wähle einen Spieler, der betrunken wird.",
+    "reminders": [
+      "Betrunken"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "Schergen beginnen das Spiel mit dem Wissen, dass 3 Charaktere nicht im Spiel sind.",
+    "edition": "experimental",
+    "firstNight": 6,
+    "firstNightReminder": "Nachdem die Schergen ihre Info bekommen haben, wecke jeden Minion und szeige ihm drei Charaktere, die nicht im Spiel sind. Es können die gleichen oder unterschiedliche, oder auch die Bluffs des Dämons sein.",
+    "id": "de_DE_snitch",
+    "image": "https://wiki.bloodontheclocktower.com/images/c/c1/Icon_snitch.png",
+    "name": "Petze",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "Wenn du stirbst, dürfen Schergen & Dämonen neue Schergen & Dämonen Charaktere für sich wählen.",
+    "edition": "experimental",
+    "firstNight": 0,
+    "firstNightReminder": "Ist der Hutmacher am Tag oder in der Nacht gestorben, wecke alle Bösen zusammen und gehe der Reihe nach durch, welche Schergen/Dämonen sie werden wollen.",
+    "id": "de_DE_hatter",
+    "image": "https://wiki.bloodontheclocktower.com/images/4/44/Icon_hatter.png",
+    "name": "Hutmacher",
+    "otherNight": 41,
+    "otherNightReminder": "",
+    "reminders": ["Teeparty heute Nacht"],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "Jede Nacht*, wenn einer deiner guten lebenden Nachbarn vergiftet oder betrunken ist, stirbst du.",
+    "edition": "experimental",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_acrobat",
+    "image": "https://wiki.bloodontheclocktower.com/images/b/b5/Icon_acrobat.png",
+    "name": "Akrobat",
+    "otherNight": 39,
+    "otherNightReminder": "Der Akrobat stirbt wenn ein guter, lebender Nachbar betrunken ist oder vergiftet wurde.",
+    "reminders": [
+      "Tot"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "Alle Schergen wissen, dass du im Spiel bist. Wenn dich ein Scherge öffentlich errät (einmal), verliert dein Team.",
+    "edition": "experimental",
+    "firstNight": 31,
+    "firstNightReminder": "Wecke alle Scherge und zeige ihnen die 'Dieser Charakter hat Dich ausgewählt' Karte und die Karte der Maid.",
+    "id": "de_DE_damsel",
+    "image": "https://wiki.bloodontheclocktower.com/images/d/dc/Icon_damsel.png",
+    "name": "Maid",
+    "otherNight": 52,
+    "otherNightReminder": "Wecke die Maid, wenn Sie vom Jäger ausgewählt wurde und zeige ihr die 'Du bist' Karte und einen Token eines Bürgers, der sich nicht im Spiel befindet.",
+    "reminders": [
+      "Rateversuch verbraucht"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "Du kannst nur einmal pro Spiel nominieren. Wenn du nominierst, falls der Nominierte kein Dämon ist, stirbt er.",
+    "edition": "experimental",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_golem",
+    "image": "https://wiki.bloodontheclocktower.com/images/2/2b/Icon_golem.png",
+    "name": "Golem",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "Kann nicht nominieren"
+    ],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "Wer gewinnt, verliert & wer verliert, gewinnt, sogar wenn du tot bist.",
+    "edition": "experimental",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_heretic",
+    "image": "https://wiki.bloodontheclocktower.com/images/4/4a/Icon_heretic.png",
+    "name": "Ketzer",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "1 Spieler ist betrunken, sogar wenn du stirbst. Wenn du errätst, wer es ist (einmal), erfährst du, welcher Spieler der Dämon ist. Rätst du falsch, erhälst du Fehlinformationen.",
+    "edition": "experimental",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_puzzlemaster",
+    "image": "https://wiki.bloodontheclocktower.com/images/7/7a/Icon_puzzlemaster.png",
+    "name": "Rätselmeister",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [
+      "Rätsel-Betrunken",
+      "Rateversuch verbraucht"
+    ],
+    "setup": false,
+    "team": "outsider"
+  }, 
+  {
+    "ability": "Wenn du am verantwortlichsten dafür bist, dass dein Team verliert, wechselst du die Gesinnung und gewinnst, sogar wenn du tot bist.",
+    "edition": "experimental",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_politician",
+    "image": "https://wiki.bloodontheclocktower.com/images/a/a3/Icon_politician.png",
+    "name": "Politiker",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "Wenn du stirbst, erhält der Erzähler eine Schergenfähigkeit, die nicht im Spiel ist.",
+    "edition": "experimental",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_plague_doctor",
+    "image": "https://wiki.bloodontheclocktower.com/images/e/e2/Icon_plaguedoctor.png",
+    "name": "Pestdoktor",
+    "otherNight": 39,
+    "otherNightReminder": "Wähle eine Schergenfähigkeit, die nicht im Spiel ist und erhalte sie.",
+    "reminders": ["Erzähler-Fähigkeit"],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "In deiner ersten Nacht, wähle einen Spieler (nicht dich): Du trittst deren Team bei (ohne es mitgeteilt zu bekommen), auch wenn betrunken oder vergiftet. ",
+    "edition": "experimental",
+    "firstNight": 40,
+    "firstNightReminder": "",
+    "id": "de_DE_ogre",
+    "image": "https://wiki.bloodontheclocktower.com/images/2/25/Icon_ogre.png",
+    "name": "Oger",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": ["Freund"],
+    "setup": false,
+    "team": "outsider",
+    "jinxes": [
+      {"id": "de_DE_pit-hag", "reason": "Wenn die Vettel einen bösen Spieler zum Oger macht, kann dieser nicht durch seine Fähigkeit gut werden."},
+      {"id": "de_DE_recluse", "reason": "Wenn der Einsiedler als böse für den Oger registriert, wenn dieser ihn wählt, erfährt der Oger, dass er böse ist."},
+      {"id": "de_DE_spy", "reason": "Der Spion registriert immer als böse für den Oger."}
+    ]
+  },
+  {
+    "ability": "Sind 5 oder mehr Spieler am Leben, musst du für jede Anklage abstimmen.",
+    "edition": "experimental",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_zealot",
+    "image": "https://wiki.bloodontheclocktower.com/images/1/16/Icon_zealot.png",
+    "name": "Fanatiker",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "team": "outsider",
+    "jinxes": [
+      {"id": "de_DE_cannibal", "reason": "Wenn der Kannibale die Fähigkeit des Fanatikers erhält, lernt er das."},
+      {"id": "de_DE_vizier", "reason": "Der Fanatiker kann als böse für den Wesir registrieren."},
+      {"id": "de_DE_legion", "reason": "Der Fanatiker kann als böse für Legions Fähigkeit registrieren."},
+      {"id": "de_DE_riot", "reason": "Der Fanatiker muss immer direkt nominieren, wenn er in einem Aufruhrspiel nominiert wurde."}
+    ]
+  }
+
+
+]

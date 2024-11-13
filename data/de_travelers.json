@@ -1,0 +1,11 @@
+[{
+    "ability": "Jede Nacht, wähle 2 Spieler: du erfährst, ob sich unter ihnen ein Dämon befindet. Es gibt jedoch einen guten Spieler, der für dich auch als Dämon registriert.",
+    "edition": "tb",
+    "firstNight": 37,
+    "firstNightReminder": "Die Wahrsagerin zeigt auf zwei Spieler. Ist einer dieser Spieler der Dämon nicke mit dem Kopf, andernfalls schūttle den Kopf.",
+    "id": "de_DE_apprentice",
+    "image": "https://wiki.bloodontheclocktower.com/images/c/c3/Icon_fortune_teller.png",
+    "name": "Apprentice",
+    "team": "traveler"
+}
+]

@@ -1,0 +1,447 @@
+[
+
+{
+    "ability": "Wähle jede Nacht* 1 Spieler: Er stirbt. Falls dud ich damit selbst tötest, wird ein Scherge zum Imp.",
+    "edition": "tb",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_imp",
+    "image": "https://wiki.bloodontheclocktower.com/images/5/5c/Icon_imp.png",
+    "name": "Imp",
+    "otherNight": 24,
+    "otherNightReminder": "Der Imp zeigt auf einen Spieler. Dieser Spieler stirbt. Wenn sich der Imp selbst wählt: Ersetze den Charakter eines lebenden Schergen mit einem übrigen Imp Token. Zeige ihm die 'Du bist' Karte und dann den Imp Token.",
+    "reminders": [
+      "Tot"
+    ],
+    "setup": false,
+    "team": "demon"
+  },
+
+  {
+    "ability": "Jede Nacht*, falls heute kein Spieler starb, wähle 1 Spieler: Er stirbt. Wenn du zum 1. Mal stirbst, überlebst du, aber erscheinst tot.",
+    "edition": "bmr",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_zombuul",
+    "image": "https://wiki.bloodontheclocktower.com/images/1/15/Icon_zombuul.png",
+    "name": "Zombuul",
+    "otherNight": 25,
+    "otherNightReminder": "Wenn niemand am Tag gestorben ist: Der Zombuul zeigt auf einen Spieler. Dieser Spieler stirbt.",
+    "reminders": [
+      "Tot",
+      "starb heute"
+    ],
+    "setup": false,
+    "team": "demon"
+  },
+
+  {
+    "ability": "Wähle jede Nacht* 1 Spieler: Er stirbt. Fähigkeiten von Bürgern liefern falsche Informationen. Falls an einem Tag keiner hingerichtet wird, gewinnt Böse.",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_vortox",
+    "image": "https://wiki.bloodontheclocktower.com/images/8/89/Icon_vortox.png",
+    "name": "Vortox",
+    "otherNight": 31,
+    "otherNightReminder": "Der Vortox zeigt auf einen Spieler. Dieser Spieler stirbt.",
+    "reminders": [
+      "Tot"
+    ],
+    "setup": false,
+    "team": "demon"
+  },
+
+  {
+    "ability": "Wähle jede Nacht* 1 Spieler: Er stirbt. Von dir getötete Schergen behalten ihre Fähigkeit & vergiften 1 benachbarten Bürger. [-1 Außenseiter]",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_vigormortis",
+    "image": "https://wiki.bloodontheclocktower.com/images/1/1a/Icon_vigormortis.png",
+    "name": "Vigormortis",
+    "otherNight": 32,
+    "otherNightReminder": "Der Vigormortis zeigt auf einen Spieler. Dieser Spieler stirbt. Ist es ein Scherge, behält er seine Fähigkeit und ein Bürger ist vergiftet.",
+    "reminders": [
+      "Tot",
+      "hat Fähigkeit",
+      "vergiftet"
+    ],
+    "setup": true,
+    "team": "demon"
+  }, 
+  {
+    "ability": "Wähle jede Nacht 1 Spieler: Er wird vergiftet. Der zuvor vergiftete Spieler stirbt & ist dann nicht mehr vergiftet.",
+    "edition": "bmr",
+    "firstNight": 28,
+    "firstNightReminder": "Der Pukka zeigt auf einen Spieler. Dieser Spieler ist vergiftet.",
+    "id": "de_DE_pukka",
+    "image": "https://wiki.bloodontheclocktower.com/images/f/f4/Icon_pukka.png",
+    "name": "Pukka",
+    "otherNight": 26,
+    "otherNightReminder": "Der Pukka zeigt auf einen Spieler. Dieser Spieler ist vergiftet. Der Spieler der zuvor vergiftet wurde, stirbt.",
+    "reminders": [
+      "Tot",
+      "Vergiftet"
+    ],
+    "setup": false,
+    "team": "demon"
+  },
+  {
+    "ability": "Wähle jede Nacht* 2 Spieler: Sie sterben. Ein toter Spieler, den du in der vorherigen Nacht gewählt hast, könnte hochgewürgt werden.",
+    "edition": "bmr",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_shabaloth",
+    "image": "https://wiki.bloodontheclocktower.com/images/1/1f/Icon_shabaloth.png",
+    "name": "Shabaloth",
+    "otherNight": 27,
+    "otherNightReminder": "Einer der Spieler, die der Shabaloth in der vorherigen Nacht gewählt, hat kann wiederauferstehen. Der Shabaloth zeigt auf zwei Spieler. Diese Spieler sterben.",
+    "reminders": [
+      "Am Leben",
+      "tot"
+    ],
+    "setup": false,
+    "team": "demon"
+  },
+  {
+    "ability": "Jede Nacht* darfst du 1 Spieler wählen: Er stirbt. Falls du letzte Nacht niemanden gewählt hast, wähle heute Nacht 3 Spieler.",
+    "edition": "bmr",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_po",
+    "image": "https://wiki.bloodontheclocktower.com/images/b/b2/Icon_po.png",
+    "name": "Poe",
+    "otherNight": 28,
+    "otherNightReminder": "Wenn der Pou niemanden in der letzten Nacht gewählt hat: Der Pou zeigt auf drei Spieler. Andernfalls: Der Pou zeigt entweder Nein durch Kopfschütteln oder zeigt auf einen Spieler. Ausgewählte Spieler sterben.",
+    "reminders": [
+      "3 Angriffe",
+      "Tot"
+    ],
+    "setup": false,
+    "team": "demon"
+  },
+  {
+    "ability": "Wähle jede Nacht* 1 Spieler: Er stirbt. Der 1. Außenseiter, der so stirbt, wird ein böser Fang Gu & du stirbst stattdessen. [+1 Außenseiter]",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_fanggu",
+    "image": "https://wiki.bloodontheclocktower.com/images/0/0e/Icon_fanggu.png",
+    "name": "Fang Gu",
+    "otherNight": 29,
+    "otherNightReminder": "Der Fang Gu zeigt auf einen Spieler. Dieser Spieler stirbt. Falls dieser Spieler ein Außenseiter war nud kein anderer Fang Gu im Spiel ist: Der Fang Gu stirbt an seiner Stelle. Der ausgewählte Spieler wird der neue Fang Gu. Wecke den neuen Fang Gu. Zeige ihm die 'Du bist' Karte und den Token des Fang Gu. Danach zeige ihm die 'Du bist' Karte und ein Daumen nach unten (böse) Zeichen",
+    "reminders": [
+      "Einmalig",
+      "Tot"
+    ],
+    "setup": true,
+    "team": "demon",
+    "jinxes":[
+      {
+        "id": "de_DE_scarlet_woman",
+        "reason": "Wenn der Fang Gu stirbt, weil er das erste Mal einen Außenseiter gewählt hat, wird die Frau in Rot nicht zum Fang Gu."
+      }
+    ]
+  },
+  {
+    "ability": "Wähle jede Nacht* 1 Spieler: Er stirbt. Deine 2 benachbarten Bürger sind vergiftet.",
+    "edition": "snv",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_no_dashii",
+    "image": "https://wiki.bloodontheclocktower.com/images/e/eb/Icon_nodashii.png",
+    "name": "No Dashii",
+    "otherNight": 30,
+    "otherNightReminder": "Der No Dashii zeigt auf einen Spieler. Dieser Spieler stirbt.",
+    "reminders": [
+      "Tot",
+      "vergiftet", "vergiftet"
+    ],
+    "setup": false,
+    "team": "demon"
+  },
+  {
+    "ability": "Jede Nacht entscheiden die Schergen, wer das Monster Klein-Charakterplättchen babysittet & der Dämon 'ist'. Ein Spieler stirbt jede Nacht*. [+1 Scherge]",
+    "edition": "experimental",
+    "firstNight": 16,
+    "firstNightReminder": "Wecke alle Schergen gemeinsam. Sie müssen sich einigen, wer von Ihnen das Monster Klein babysittet.",
+    "id": "de_DE_lil_monsta",
+    "image": "https://wiki.bloodontheclocktower.com/images/c/c3/Icon_lilmonsta.png",
+    "name": "Monster Klein",
+    "otherNight": 36,
+    "otherNightReminder": "Wecke alle Schergen gemeinsam. Sie müssen sich einigen, wer von Ihnen das Monster Klein babysittet. Wähle einen Spieler, dieser Spieler stirbt.",
+    "reminders": [],
+    "remindersGlobal": [
+      "Tot",
+      "ist der Dämon"
+    ],
+    "setup": true,
+    "special":[
+    {
+      "type": "selection",
+      "name": "bag-disabled"
+    }],
+    "team": "demon",
+    "jinxes": [
+      {
+        "id": "de_DE_magician",
+        "reason": "Nur einer der Charaktere kann im Spiel sein"
+      },
+      {
+        "id": "de_DE_scarlet_woman",
+        "reason": "Wenn 5 oder mehr Spieler am Leben sind und der Spieler mit dem Monster Klein Plättchen stirbt, bekommt es die Frau in Rot in der Nacht"
+      },
+      {
+        "id": "de_DE_poppygrower",
+        "reason": "Schergen werden nacheinander aufgeweckt, ob sie Monster Klein babysitten möchten. Solange bis ein Scherge sich freiwillig meldet."
+      },
+      {
+        "id": "de_DE_hatter",
+        "reason": "Wenn sich ein Dämon für Monster Klein entscheidet, wählt er auch einen Schergen aus, zu dem er wird und er babysittet heute Monster Klein"
+      },
+      {
+        "id": "de_DE_organ_grinder", "reason": "Wenn das Orgeläffchen Monster Klein babysittet, zählen Stimmen für ihn normal." 
+      },
+      {
+        "id": "de_DE_organ_vizier", "reason": "Der Vizier kann durch Hinrichtung sterben, wenn er Monster Klein babysittet." 
+      }
+      
+    ]
+  },  
+  {
+    "ability": "Jede Nacht*, wähle 3 Spieler (alle Spieler erfahren, wer): jeder wählt leise, ob er leben oder sterben möchte, aber wenn alle leben, sterben alle.",
+    "edition": "experimental",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_al-hadikhia",
+    "image": "https://wiki.bloodontheclocktower.com/images/1/18/Icon_alhadikhia.png",
+    "name": "Al-Hadikhia",
+    "otherNight": 33,
+    "otherNightReminder": "Der Al-Hadikhia wählt 3 Spieler. Wecke nacheinander alle drei Spieler und frage sie ob sie leben (nicken) oder sterben wollen (Kopfschütteln). Wählen alle drei Spieler das Leben, sterben alle drei.",
+    "reminders": [
+      "1",
+      "2",
+      "3",
+      "Wählt Leben",
+      "Wählt Leben",
+      "Wählt Leben",
+      "Wählt Tod",
+      "Wählt Tod",
+      "Wählt Tod"
+    ],
+    "setup": false,
+    "team": "demon",
+    "jinxes": [
+      {"id": "de_DE_mastermind", "reason": "Nur einer der Charaktere kann im Spiel sein. Böse Spieler lernen welcher Spieler und Charakter es ist." },
+      {"id": "de_DE_scarlet_woman", "reason": "Wenn es zwei lebende Al-Hadikhias gibt, wird der Frau in Rot Al-Hadikhia wieder zur Frau in Rot" }
+    ]
+  },
+  {
+    "ability": "Jede Nacht* könnte ein Spieler sterben. Hinrichtungen schlagen fehl, wenn nur böse Spieler abgestimmt haben. Du registrierst auch als Scherge. [Eine Mehrzahl von Spielern sind Legion]",
+    "edition": "experimental",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_legion",
+    "image": "https://wiki.bloodontheclocktower.com/images/c/cb/Icon_legion.png",
+    "name": "Legion",
+    "otherNight": 34,
+    "otherNightReminder": "Wähle einen Spieler, dieser Spieler stirbt.",
+    "reminders": [
+      "Tot",
+      "Soll hingerichtet werden"
+    ],
+    "setup": true,
+    "special": [
+      {
+          "type": "selection",
+          "name": "bag-duplicate"
+      }
+  ],
+    "team": "demon",
+    "jinxes": [
+      {"id": "de_DE_preacher", "reason": "Nur einer der Charaktere kann im Spiel sein."},
+      {"id": "de_DE_engineer", "reason": "Legion und die Ingeneurin können nicht beide zu Beginn des Spiels im Spiel sein. Wenn die Ingeneurin Legion als Dämon wählt, werden die meisten Spieler (inklusiver aller Bösen) zu bösen Legion."},
+      {"id": "de_DE_hatter", "reason": "Wenn der Hutmacher stirbt und Legion im Spiel ist, passiert nichts. Wenn der Hutmacher stirbt und ein böser Spieler wählt Legion, werden alle momentanen bösen Spieler zu Legion."}
+    ]
+  },
+  {
+    "ability": "Wenn mehr als 1 guter Spieler hingerichtet wird, gewinnt das böse Team. Alle Spieler wissen, dass du im Spiel bist. Nach dem 5. Tag gewinnt das böse Team.",
+    "edition": "experimental",
+    "firstNight": 53,
+    "firstNightReminder": "Platziere den Leviathan 'Tag 1' Marker. Kündige an: 'Der Leviathan ist im Spiel. Das ist Tag 1.'",
+    "id": "de_DE_leviathan",
+    "image": "https://wiki.bloodontheclocktower.com/images/a/a7/Icon_leviathan.png",
+    "name": "Leviathan",
+    "otherNight": 73,
+    "otherNightReminder": "Wechsle den Leviathan Tag reminder für den nächsten Tag.",
+    "reminders": [
+      "Guter Spieler exekutiert",
+      "Tag 1",
+      "Tag 2",
+      "Tag 3",
+      "Tag 4",
+      "Tag 5"
+    ],
+    "setup": false,
+    "team": "demon",
+    "jinxes": [
+      {"id": "de_DE_farmer", "reason": "Wenn der Leviathan im Spiel ist und ein Bauer durch Hinrichtung stirbt, wird in der Nacht ein guter Spieler zum Bauern."},
+      {"id": "de_DE_innkeeper", "reason": "Wenn der Leviathan einen Schankwirt-beschützen Spieler nominiert und dieser hingerichtet wird, stirbt er nicht."},
+      {"id": "de_DE_mayor", "reason": "Wenn der Leviathan im Spiel ist und keine Hinrichtung am 5. Tag passiert, gewinnt das Team des Bürgermeisters"},
+      {"id": "de_DE_monk", "reason": "Wenn der Leviathan einen Mönch-beschützen Spieler nominiert und dieser hingerichtet wird, stirbt er nicht."},
+      {"id": "de_DE_ravenkeeper", "reason": "Wenn der Leviathan im Spiel ist und der Rabenwärter durch Hinrichtung stirbt, aktiviert sich dessen Fähigkeit in der Nacht."},
+      {"id": "de_DE_sage", "reason": "Wenn der Leviathan im Spiel ist und der Weise durch Hinrichtung stirbt, aktiviert sich dessen Fähigkeit in der Nacht."},
+      {"id": "de_DE_soldier", "reason": "Wenn der Leviathan den Soldaten nominiert und dieser hingerichtet wird, stirbt er nicht."},
+      {"id": "de_DE_hatter", "reason": "Wenn der Hutmacher an Tag 5 oder später stirbt, darf der Dämon nicht Leviathan wählen."}
+    ]
+  },
+  {
+    "ability": "Jede Nacht*, wähle 1 Spieler: er stirbt. Zu Beginn, wähle einen Spieler: er ist vergiftet - du stirbst, wenn (& nur wenn) er stirbt.",
+    "edition": "experimental",
+    "firstNight": 15,
+    "firstNightReminder": "Der Egel zeigt auf einen Spieler. Platziere den Vergiftet Erinnerungstoken.",
+    "id": "de_DE_lleech",
+    "image": "https://wiki.bloodontheclocktower.com/images/7/70/Icon_lleech.png",
+    "name": "Egel",
+    "otherNight": 35,
+    "otherNightReminder": "Der Egel zeigt auf einen Spieler. Dieser Spieler stirbt.",
+    "reminders": [
+      "Tot",
+      "Vergiftet"
+    ],
+    "setup": false,
+    "team": "demon",
+    "jinxes": [
+      {"id": "de_DE_mastermind", "reason": "Wenn der Drahtzieher am Leben ist und der Wirt des Egels durch Hinrichtung stirbt, bleibt der Egel am Leben aber verliert seine Fähigkeit."},
+      {"id": "de_DE_slayer", "reason": "Wenn der Schütze den Wirt des Egels erschiesst, stirbt der Wirt."},
+      {"id": "de_DE_heretic", "reason": "Wenn der Ketzer der Wirt des Egels ist und stirbt, bleibt er vergiftet."}
+    ]
+  },
+  {
+    "ability": "Nominierte Spieler sterben, können aber sofort nominieren (am 3. Tag müssen sie). Nach dem 3. Tag gewinnt das böse Team. [Alle Schergen sind Aufruhr]",
+    "edition": "experimental",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_riot",
+    "image": "https://wiki.bloodontheclocktower.com/images/2/2d/Icon_riot.png",
+    "name": "Aufruhr",
+    "otherNight": 0,
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": true,
+    "team": "demon",
+    "special": [
+      {
+          "type": "selection",
+          "name": "bag-duplicate"
+      }
+  ],
+    "jinxes": [
+      {"id": "de_DE_exorcist", "reason": "Nur einer der Charaktere kann im Spiel sein"},
+      {"id": "de_DE_flowergirl", "reason": "Nur einer der Charaktere kann im Spiel sein"},
+      {"id": "de_DE_minstrel", "reason": "Nur einer der Charaktere kann im Spiel sein"},
+      {"id": "de_DE_pit-hag", "reason": "Wenn die Vettel Aufruhr kreiert, werden alle bösen Spieler zu Aufruhr. Wenn das nach Tag 3 passiert, wird ein weiterer letzter Tag gespietl."},
+      {"id": "de_DE_engineer", "reason": "Aufruhr und die Ingeneurin können nicht beide zu Beginn des Spiels im Spiel sein. Wenn die Ingeneurin Aufruhr als Dämon wählt, werden alle bösen Spieler zu Aufruhr."},
+      {"id": "de_DE_clockmaker", "reason": "Aufruhr registriert als Scherge für den Uhrmacher."},
+      {"id": "de_DE_investigator", "reason": "Aufruhr registriert als Scherge für den Ermittler."},
+      {"id": "de_DE_preacher", "reason": "Aufruhr registriert als Scherge für den Priester."},
+      {"id": "de_DE_town_crier", "reason": "Aufruhr registriert als Scherge für den Stadtschreier."},
+      {"id": "de_DE_damsel", "reason": "Aufruhr registriert als Scherge für die Maid."},
+      {"id": "de_DE_cannibal", "reason": "Spieler die durch Nominieren sterben, registrieren als hingerichtet für den Kannibalen"},
+      {"id": "de_DE_pacifist", "reason": "Spieler die durch Nominieren sterben, registrieren als hingerichtet für den Pazifisten"},
+      {"id": "de_DE_undertaker", "reason": "Spieler die durch Nominieren sterben, registrieren als hingerichtet für den Bestatter"},
+      {"id": "de_DE_devils_advocate", "reason": "Spieler die durch Nominieren sterben, registrieren als hingerichtet für des Teufels Anwalt"},
+      {"id": "de_DE_farmer", "reason": "Wenn ein Aufruhr-Spieler den Bauern nominiert und tötet, aktiviert sich dessen Fähigkeit in der Nacht."},
+      {"id": "de_DE_grandmother", "reason": "Wenn ein Aufruhr-Spieler das Enkelkind nominiert und tötet,stirbt auch die Großmutter."},
+      {"id": "de_DE_king", "reason": "Wenn ein Aufruhr-Spieler den König nominiert und tötet, und der Chorknabe lebt, aktiviert sich dessen Fähigkeit in der Nacht."},
+      {"id": "de_DE_ravenkeeper", "reason": "Wenn ein Aufruhr-Spieler den Rabenwärter nominiert und tötet, aktiviert sich dessen Fähigkeit in der Nacht."},
+      {"id": "de_DE_sage", "reason": "Wenn ein Aufruhr-Spieler den Weisen nominiert und tötet, aktiviert sich dessen Fähigkeit in der Nacht."},
+      {"id": "de_DE_innkeeper", "reason": "Wenn ein Aufruhr-Spieler einen Schankwirt-beschützen Spieler nominiert, stirbt dieser nicht."},
+      {"id": "de_DE_monk", "reason": "Wenn ein Aufruhr-Spieler einen Mönch-beschützen Spieler nominiert, stirbt dieser nicht."},
+      {"id": "de_DE_soldier", "reason": "Wenn ein Aufruhr-Spieler den Soldaten nominiert, stirbt dieser nicht."},
+      {"id": "de_DE_mayor", "reason": "Wenn der dritte Tag mit nur drei lebenden Spielern beginnt, können die Spieler als Gruppe sich entscheiden, nicht zu nominieren. Ist der Bürgermeister noch am Leben, gewinnt dessen Team."},
+      {"id": "de_DE_butler", "reason": "Der Butler darf nicht seinen Meister nominieren."},
+      {"id": "de_DE_golem", "reason": "Wenn ein Golem, einen Aufruhr-Spieler nominiert, stirbt dieser nicht."},
+      {"id": "de_DE_saint", "reason": "Wenn ein guter Spieler den Heiligen nominiert und tötet, verliert das Team des Heiligen."},
+      {"id": "de_DE_snitch", "reason": "Wenn die Petze im Spiel ist, bekommt jeder Aufruhr drei zusätzliche Bluffs."},
+      {"id": "de_DE_hatter", "reason": "Wenn der Hutmacher stirbt, Aufruhr im Spiel ist und ein böser Spieler einen anderen Dämonen wählt, wird ein normales böses Team aus den Aufruhr-Spielern erstellt. Wenn der Hutmacher stirbt und der Dämon Aufruhr wählt, werden auch Schergen zu Aufruhr."}
+    ]
+  },
+  {
+    "ability": "Jede Nacht*, wähle 1 Character: Er stirbt. Ist er nicht im Spiel, entscheidet der Erzähler, wer stirbt.",
+    "edition": "experimental",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_ojo",
+    "image": "https://wiki.bloodontheclocktower.com/images/6/6f/Icon_ojo.png",
+    "name": "Ojo",
+    "otherNight": 35,
+    "otherNightReminder": "",
+    "reminders": [
+      "Tot",
+      "Tot"
+    ],
+    "setup": false,
+    "team": "demon"
+  },
+  {
+    "ability": "Jede Nacht*, wähle 1 Spieler, der stirbt. [Du wählst, welche Spieler Schergen sind, -? bis +? Aussenseiter]",
+    "edition": "experimental",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_kazali",
+    "image": "https://wiki.bloodontheclocktower.com/images/3/3c/Icon_kazali.png",
+    "name": "Kazali",
+    "otherNight": 35,
+    "otherNightReminder": "",
+    "reminders": [
+      "Tot"
+    ],
+    "setup": true,
+    "team": "demon",
+    "jinxes": [
+      {"id": "de_DE_bounty_hunter", "reason": "Ein böser Bürger wird nur kreiert, wenn der Kopfgeldjäger noch nach dem der Kazali gewählt hat, im Spiel ist."},
+      {"id": "de_DE_choirboy", "reason": "Der Kazali kann nicht den König als Scherge wählen, wenn ein Chorknabe im Spiel ist."},
+      {"id": "de_DE_goon", "reason": "Wählt der Kazali den Trottel als Schergen, werden die restlichen Schergen vom Erzähler festgelegt."},
+      {"id": "de_DE_huntsman", "reason": "Wählt der Kazali die Maid als Schergen, wenn der Jäger im Spiel ist, wird ein anderer guter Spieler die Maid."},
+      {"id": "de_DE_marionette", "reason": "Wählt der Kazali als Schergen eine Marionette, muss er einen seiner Nachbarn wählen."}
+    ]
+  },
+  {
+    "ability": "Du beginnst das Spiel mit einer geheimen Phrase. Für jede öffentliche Verwendung, kann ein Spieler sterben.",
+    "edition": "experimental",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_yaggababble",
+    "image": "https://wiki.bloodontheclocktower.com/images/0/08/Icon_yaggababble.png",
+    "name": "Yaggababble",
+    "otherNight": 35,
+    "otherNightReminder": "",
+    "reminders": [
+      "Tot", "Tot", "Tot", "Tot"
+    ],
+    "setup": false,
+    "team": "demon",
+    "jinxes": [
+      {"id": "de_DE_exorcist", "reason": "Wählt der Exorzist den Yaggababble, tötet die Fähigkeit des Yaggababbles nicht in der Nacht."}
+    ]
+  },
+  {
+    "ability": "Jede Nacht*, wähle 1 Spieler. Er stirbt. [Böse Charakter sind in einer Linie. Du bist in der Mitte. +1 Scherge. -? bis +? Aussenseiter]",
+    "edition": "experimental",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "de_DE_lordoftyphon",
+    "image": "https://wiki.bloodontheclocktower.com/images/c/cf/Icon_lordoftyphon.png",
+    "name": "Lord of Typhon",
+    "otherNight": 35,
+    "otherNightReminder": "",
+    "reminders": [
+      "Tot"
+    ],
+    "setup": false,
+    "team": "demon"
+  }
+  
+]

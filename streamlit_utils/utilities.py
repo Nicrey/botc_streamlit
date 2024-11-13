@@ -6,9 +6,8 @@ GAME_DATA = "stats/game_data.csv"
 PLAYER_ROLE_DATA = "stats/player_role_data.csv"
 
 def login_player(password):
-    with open("player_passwords.json", 'r', encoding='utf-8') as file:
-        data = json.load(file) 
-    return data.get(password, "")
+    
+    return st.secrets.player_passwords.get(password, "")
 
 def get_image(role_name):
     return st.session_state.characters[role_name]["image"][0]

@@ -1,0 +1,913 @@
+gameid,player,role
+20.11.23-1,Andi Bender,Spion
+20.11.23-1,Andreas Erb,Schmeichler
+20.11.23-1,Anna,Tollpatsch
+20.11.23-1,Marius,Vortox
+20.11.23-1,Roman,Uhrmacher
+20.11.23-2,Andi Bender,Mönch
+20.11.23-2,Andreas Erb,Empath
+20.11.23-2,Lukas,Frau in Rot
+20.11.23-2,Marius,Bürgermeister
+20.11.23-2,Roman,Imp
+20.11.23-2,Tim,Rabenwärter
+20.11.23-2,Nina,Wahrsagerin
+20.11.23-3,Andi Bender,Tollpatsch
+20.11.23-3,Lukas,Empath
+20.11.23-3,Marius,Weiser
+20.11.23-3,Roman,Ermittler
+20.11.23-3,Tim,Imp
+20.11.23-3,Nina,Baron
+20.11.23-4,Andi Bender,Künstlerin
+20.11.23-4,Lukas,Empath
+20.11.23-4,Marius,Kammermädchen
+20.11.23-4,Roman,Tollpatsch
+20.11.23-4,Tim,Baron
+20.11.23-4,Nina,Imp
+26.11.23-1,Andi Bender,Heiliger
+26.11.23-1,Andreas Erb,Imp
+26.11.23-1,Lukas,Mönch
+26.11.23-1,Marius,Empath
+26.11.23-1,Michelle,Giftmischer
+26.11.23-1,Roman,Jungfrau
+26.11.23-1,Tim,Betrunkener
+26.11.23-1,Nina,Waschfrau
+26.11.23-1,Niklas,Rabenwärter
+26.11.23-2,Andi Bender,Wahnsinniger
+26.11.23-2,Andreas Erb,Pou
+26.11.23-2,Anna,Tee-Lady
+26.11.23-2,Lukas,Pate
+26.11.23-2,Marius,Tüftler
+26.11.23-2,Michelle,Tratschtante
+26.11.23-2,Roman,Seemann
+26.11.23-2,Niklas,Kammermädchen
+26.11.23-3,Andi Bender,Tratschtante
+26.11.23-3,Andreas Erb,Pazifist
+26.11.23-3,Anna,Tüftler
+26.11.23-3,Lukas,Drahtzieher
+26.11.23-3,Marius,Narr
+26.11.23-3,Michelle,Shabaloth
+26.11.23-3,Roman,Großmutter
+26.11.23-3,Niklas,Seemann
+28.11.23-1,Andi Bender,Koch
+28.11.23-1,Andreas Erb,Imp
+28.11.23-1,Anna,Ermittler
+28.11.23-1,Domi,Bürgermeister
+28.11.23-1,Lena,Heiliger
+28.11.23-1,Lukas,Giftmischer
+28.11.23-1,Michelle,Mönch
+28.11.23-1,Andi Schmidt,Empath
+28.11.23-2,Andi Bender,Soldat
+28.11.23-2,Andreas Erb,Wahrsagerin
+28.11.23-2,Domi,Koch
+28.11.23-2,Lena,Giftmischer
+28.11.23-2,Michelle,Imp
+28.11.23-2,Tim,Ermittler
+28.11.23-2,Andi Schmidt,Empath
+28.11.23-3,Andi Bender,Empath
+28.11.23-3,Andreas Erb,Rabenwärter
+28.11.23-3,Anna,Imp
+28.11.23-3,Domi,Betrunkener
+28.11.23-3,Lena,Jungfrau
+28.11.23-3,Michelle,Giftmischer
+28.11.23-3,Tim,Soldat
+28.11.23-3,Andi Schmidt,Schütze
+28.11.23-4,Andi Bender,Betrunkener
+28.11.23-4,Andreas Erb,Rabenwärter
+28.11.23-4,Anna,Butler
+28.11.23-4,Domi,Baron
+28.11.23-4,Lena,Imp
+28.11.23-4,Michelle,Mönch
+28.11.23-4,Tim,Heiliger
+28.11.23-4,Andi Schmidt,Bestatter
+02.12.23-1,Andi Bender,Baron
+02.12.23-1,Domi,Heiliger
+02.12.23-1,Lukas,Bestatter
+02.12.23-1,Marius,Betrunkener
+02.12.23-1,Roman,Imp
+02.12.23-1,Tim,Schütze
+02.12.23-1,Maurice,Giftmischer
+02.12.23-1,Gottfried,Empath
+02.12.23-1,Dustin,Waschfrau
+02.12.23-1,Justin,Mönch
+04.12.23-1,Andi Bender,Rabenwärter
+04.12.23-1,Andreas Erb,Imp
+04.12.23-1,Anna,Wahrsagerin
+04.12.23-1,Lena,Bürgermeister
+04.12.23-1,Lukas,Koch
+04.12.23-1,Roman,Schütze
+04.12.23-1,Tim,Frau in Rot
+04.12.23-2,Andi Bender,Bestatter
+04.12.23-2,Andreas Erb,Schütze
+04.12.23-2,Anna,Einsiedler
+04.12.23-2,Lena,Heiliger
+04.12.23-2,Lukas,Betrunkener
+04.12.23-2,Roman,Baron
+04.12.23-2,Tim,Imp
+04.12.23-2,Nina,Empath
+04.12.23-3,Andi Bender,Soldat
+04.12.23-3,Andreas Erb,Rabenwärter
+04.12.23-3,Anna,Koch
+04.12.23-3,Lena,Frau in Rot
+04.12.23-3,Lukas,Butler
+04.12.23-3,Marius,Imp
+04.12.23-3,Roman,Empath
+04.12.23-3,Nina,Bestatter
+04.12.23-4,Andi Bender,Schütze
+04.12.23-4,Andreas Erb,Imp
+04.12.23-4,Lena,Bibliothekarin
+04.12.23-4,Lukas,Wahrsagerin
+04.12.23-4,Marius,Giftmischer
+04.12.23-4,Roman,Mönch
+04.12.23-4,Nina,Jungfrau
+04.12.23-5,Andi Bender,Mönch
+04.12.23-5,Andreas Erb,Rabenwärter
+04.12.23-5,Lena,Wahrsagerin
+04.12.23-5,Lukas,Butler
+04.12.23-5,Marius,Baron
+04.12.23-5,Roman,Betrunkener
+04.12.23-5,Nina,Imp
+12.12.23-1,Andi Bender,Waschfrau
+12.12.23-1,Andreas Erb,Einsiedler
+12.12.23-1,Anna,Bestatter
+12.12.23-1,Domi,Mönch
+12.12.23-1,Lena,Imp
+12.12.23-1,Marius,Betrunkener
+12.12.23-1,Roman,Baron
+12.12.23-2,Andi Bender,Bestatter
+12.12.23-2,Andreas Erb,Imp
+12.12.23-2,Anna,Bürgermeister
+12.12.23-2,Domi,Koch
+12.12.23-2,Lena,Wahrsagerin
+12.12.23-2,Roman,Waschfrau
+12.12.23-2,Tim,Giftmischer
+12.12.23-3,Andi Bender,Schütze
+12.12.23-3,Andreas Erb,Betrunkener
+12.12.23-3,Domi,Empath
+12.12.23-3,Lena,Imp
+12.12.23-3,Lukas,Mönch
+12.12.23-3,Michelle,Soldat
+12.12.23-3,Roman,Frau in Rot
+12.12.23-3,Tim,Jungfrau
+12.12.23-4,Andi Bender,Pukka
+12.12.23-4,Andreas Erb,Seemann
+12.12.23-4,Domi,Minnesänger
+12.12.23-4,Lena,Tratschtante
+12.12.23-4,Lukas,Tee-Lady
+12.12.23-4,Michelle,Drahtzieher
+12.12.23-4,Roman,Trottel | Böse
+12.12.23-4,Tim,Schankwirt
+17.12.23-1,Andi Bender,Künstlerin
+17.12.23-1,Andreas Erb,Schneiderin
+17.12.23-1,Domi,Uhrmacher
+17.12.23-1,Lena,Jongleur
+17.12.23-1,Marius,Hexe
+17.12.23-1,Michelle,No Dashii
+17.12.23-1,Roman,Orakel
+17.12.23-2,Andi Bender,Schlangenbeschwörer
+17.12.23-2,Andreas Erb,Blumenmädchen
+17.12.23-2,Domi,Cerenovus
+17.12.23-2,Lena,Genie
+17.12.23-2,Lukas,Tollpatsch
+17.12.23-2,Marius,Träumer
+17.12.23-2,Michelle,Barbier | Böse
+17.12.23-2,Roman,Fang Gu
+17.12.23-3,Andi Bender,Vigormortis
+17.12.23-3,Andreas Erb,Stadtschreier
+17.12.23-3,Domi,Jongleur
+17.12.23-3,Lena,Künstlerin
+17.12.23-3,Marius,Weiser
+17.12.23-3,Michelle,Hexe
+17.12.23-3,Roman,Philosoph
+19.12.23-1,Andi Bender,Wahrsagerin
+19.12.23-1,Andreas Erb,Imp
+19.12.23-1,Domi,Giftmischer
+19.12.23-1,Lena,Ermittler
+19.12.23-1,Roman,Koch
+19.12.23-1,Tim,Mönch
+19.12.23-1,Konstantin,Bestatter
+19.12.23-2,Andi Bender,Empath
+19.12.23-2,Andreas Erb,Mönch
+19.12.23-2,Domi,Soldat
+19.12.23-2,Lena,Spion
+19.12.23-2,Roman,Bürgermeister
+19.12.23-2,Tim,Bestatter
+19.12.23-2,Konstantin,Imp
+19.12.23-3,Andi Bender,Imp
+19.12.23-3,Andreas Erb,Baron
+19.12.23-3,Domi,Schütze
+19.12.23-3,Lena,Betrunkener
+19.12.23-3,Roman,Einsiedler
+19.12.23-3,Tim,Bestatter
+19.12.23-3,Konstantin,Jungfrau
+19.12.23-4,Andi Bender,Bürgermeister
+19.12.23-4,Andreas Erb,Imp
+19.12.23-4,Domi,Betrunkener
+19.12.23-4,Lena,Wahrsagerin
+19.12.23-4,Marius,Jungfrau
+19.12.23-4,Roman,Frau in Rot
+19.12.23-4,Konstantin,Empath
+19.12.23-5,Andi Bender,Waschfrau
+19.12.23-5,Andreas Erb,Koch
+19.12.23-5,Domi,Bestatter
+19.12.23-5,Lena,Ermittler
+19.12.23-5,Marius,Imp
+19.12.23-5,Roman,Giftmischer
+19.12.23-5,Konstantin,Mönch
+27.12.23-1,Andi Bender,Koch
+27.12.23-1,Andreas Erb,Bestatter
+27.12.23-1,Domi,Imp
+27.12.23-1,Lena,Jungfrau
+27.12.23-1,Michelle,Mönch
+27.12.23-1,Roman,Spion
+27.12.23-1,Sonja,Empath
+27.12.23-1,Konstantin,Einsiedler
+27.12.23-1,Elli,Heiliger
+27.12.23-2,Andi Bender,Butler
+27.12.23-2,Andreas Erb,Bestatter
+27.12.23-2,Domi,Bürgermeister
+27.12.23-2,Lena,Empath
+27.12.23-2,Lukas,Heiliger
+27.12.23-2,Michelle,Wahrsagerin
+27.12.23-2,Roman,Waschfrau
+27.12.23-2,Tim,Imp
+27.12.23-2,Sonja,Betrunkener
+27.12.23-2,Konstantin,Giftmischer
+27.12.23-2,Elli,Baron
+27.12.23-3,Andi Bender,Waschfrau
+27.12.23-3,Andreas Erb,Giftmischer
+27.12.23-3,Domi,Imp
+27.12.23-3,Lena,Mönch
+27.12.23-3,Lukas,Empath
+27.12.23-3,Michelle,Spion
+27.12.23-3,Roman,Jungfrau
+27.12.23-3,Tim,Ermittler
+27.12.23-3,Konstantin,Schütze
+27.12.23-3,Elli,Bestatter
+27.12.23-4,Andi Bender,Philosoph
+27.12.23-4,Andreas Erb,Vettel
+27.12.23-4,Anna,Mutant
+27.12.23-4,Domi,Blumenmädchen
+27.12.23-4,Lena,Schlangenbeschwörer
+27.12.23-4,Lukas,Schneiderin
+27.12.23-4,Michelle,Jongleur
+27.12.23-4,Roman,Vortox
+07.01.24-1,Andreas Erb,Bibliothekarin
+07.01.24-1,Domi,Giftmischer
+07.01.24-1,Lena,Rabenwärter
+07.01.24-1,Marius,Einsiedler
+07.01.24-1,Lena/Beccs,Empath
+07.01.24-1,Leander,Imp
+07.01.24-2,Andi Bender,Rabenwärter
+07.01.24-2,Andreas Erb,Bestatter
+07.01.24-2,Domi,Frau in Rot
+07.01.24-2,Lena,Ermittler
+07.01.24-2,Marius,Wahrsagerin
+07.01.24-2,Michelle,Soldat
+07.01.24-2,Roman,Mönch
+07.01.24-2,Lena/Beccs,Giftmischer
+07.01.24-2,Andi Schmidt,Koch
+07.01.24-2,Leander,Imp
+07.01.24-3,Andi Bender,Bibliothekarin
+07.01.24-3,Andreas Erb,Imp
+07.01.24-3,Domi,Spion
+07.01.24-3,Lena,Bestatter
+07.01.24-3,Lukas,Betrunkener
+07.01.24-3,Michelle,Waschfrau
+07.01.24-3,Roman,Baron
+07.01.24-3,Lena/Beccs,Mönch
+07.01.24-3,Tim,Einsiedler
+07.01.24-3,Andi Schmidt,Heiliger
+07.01.24-3,Leander,Wahrsagerin
+07.01.24-4,Andi Bender,Koch
+07.01.24-4,Andreas Erb,Empath
+07.01.24-4,Domi,Giftmischer
+07.01.24-4,Lena,Imp
+07.01.24-4,Lukas,Waschfrau
+07.01.24-4,Michelle,Mönch
+07.01.24-4,Roman,Jungfrau
+07.01.24-4,Tim,Soldat
+07.01.24-4,Vlad,Wahrsagerin
+07.01.24-4,Jane,Frau in Rot
+07.01.24-5,Andi Bender,Mönch
+07.01.24-5,Lena,Koch
+07.01.24-5,Lukas,Giftmischer
+07.01.24-5,Roman,Ermittler
+07.01.24-5,Tim,Imp
+07.01.24-5,Vlad,Schütze
+07.01.24-5,Jane,Empath
+07.01.24-5,Cat,Einsiedler
+09.01.24-1,Andi Bender,Soldat
+09.01.24-1,Andreas Erb,Bestatter
+09.01.24-1,Lena,Waschfrau
+09.01.24-1,Marius,Betrunkener
+09.01.24-1,Michelle,Rabenwärter
+09.01.24-1,Roman,Wahrsagerin
+09.01.24-1,Lena/Beccs,Imp
+09.01.24-1,Vlad,Spion
+09.01.24-1,Jane,Einsiedler
+09.01.24-2,Andi Bender,Rabenwärter
+09.01.24-2,Andreas Erb,Betrunkener
+09.01.24-2,Lena,Empath
+09.01.24-2,Marius,Bürgermeister
+09.01.24-2,Michelle,Schütze
+09.01.24-2,Roman,Mönch
+09.01.24-2,Lena/Beccs,Marionette
+09.01.24-2,Jane,Imp
+09.01.24-2,Cat,Einsiedler
+09.01.24-3,Andi Bender,Baron
+09.01.24-3,Andreas Erb,Betrunkener
+09.01.24-3,Domi,Mönch
+09.01.24-3,Lena,Einsiedler
+09.01.24-3,Michelle,Imp
+09.01.24-3,Roman,Empath
+09.01.24-3,Lena/Beccs,Koch
+09.01.24-3,Tim,Wahrsagerin
+09.01.24-3,Jane,Bürgermeister
+09.01.24-3,Cat,Giftmischer
+09.01.24-4,Andi Bender,Marionette
+09.01.24-4,Andreas Erb,Imp
+09.01.24-4,Lena,Bestatter
+09.01.24-4,Roman,Einsiedler
+09.01.24-4,Tim,Soldat
+09.01.24-4,Vlad,Mönch
+09.01.24-4,Jane,Betrunkener
+09.01.24-5,Andi Bender,Bestatter
+09.01.24-5,Andreas Erb,Koch
+09.01.24-5,Lena,Bürgermeister
+09.01.24-5,Roman,Marionette
+09.01.24-5,Tim,Einsiedler
+09.01.24-5,Vlad,Empath
+09.01.24-5,Jane,Imp
+14.01.24-3,Andi Bender,Bestatter
+14.01.24-3,Andreas Erb,Butler
+14.01.24-3,Lena,Bibliothekarin
+14.01.24-3,Lukas,Adlige
+14.01.24-3,Marius,Imp
+14.01.24-3,Michelle,Empath
+14.01.24-3,Roman,Betrunkener
+14.01.24-3,Vlad,Schütze
+14.01.24-3,Jane,Giftmischer
+14.01.24-4,Andi Bender,Spion
+14.01.24-4,Andreas Erb,Rabenwärter
+14.01.24-4,Lena,Betrunkener
+14.01.24-4,Lukas,Wahrsagerin
+14.01.24-4,Marius,Einsiedler
+14.01.24-4,Michelle,Schütze
+14.01.24-4,Roman,Imp
+14.01.24-4,Vlad,Shugenja
+14.01.24-4,Jane,Soldat
+21.01.24-1,Andi Bender,Rabenwärter
+21.01.24-1,Andreas Erb,Giftmischer
+21.01.24-1,Domi,Mönch
+21.01.24-1,Lena,Frau in Rot
+21.01.24-1,Lukas,Bestatter
+21.01.24-1,Marius,Wahrsagerin
+21.01.24-1,Michelle,Imp
+21.01.24-1,Roman,Koch
+21.01.24-1,Andi Schmidt,Waschfrau
+21.01.24-1,Jan,Jungfrau
+21.01.24-2,Andi Bender,Mondkind
+21.01.24-2,Andreas Erb,Attentäter
+21.01.24-2,Anna,Schmeichler
+21.01.24-2,Domi,Tratschtante
+21.01.24-2,Lena,Pou
+21.01.24-2,Lukas,Tee-Lady
+21.01.24-2,Marius,Tüftler
+21.01.24-2,Michelle,Schmeichler
+21.01.24-2,Roman,Kammermädchen
+21.01.24-3,Andi Bender,Tollpatsch
+21.01.24-3,Andreas Erb,Alchemist
+21.01.24-3,Anna,Al-Hadikhia
+21.01.24-3,Domi,Psychopath
+21.01.24-3,Lena,Kannibale
+21.01.24-3,Lukas,Glücksspieler
+21.01.24-3,Marius,Tratschtante
+21.01.24-3,Michelle,Golem
+21.01.24-3,Roman,Kultführer
+25.01.24-1,Andi Bender,No Dashii
+25.01.24-1,Andreas Erb,Orakel
+25.01.24-1,Anna,Jongleur
+25.01.24-1,Domi,Mutant
+25.01.24-1,Lena,Weiser
+25.01.24-1,Michelle,Philosoph
+25.01.24-1,Roman,Blumenmädchen
+25.01.24-1,Sonja,Vettel
+25.01.24-2,Andi Bender,Barbier
+25.01.24-2,Andreas Erb,Böser Zwilling
+25.01.24-2,Anna,Herzblatt | Böse
+25.01.24-2,Domi,Philosoph
+25.01.24-2,Lena,Fang Gu
+25.01.24-2,Lukas,Genie
+25.01.24-2,Michelle,Stadtschreier
+25.01.24-2,Roman,Jongleur
+25.01.24-3,Andi Bender,No Dashii
+25.01.24-3,Andreas Erb,Mathematiker
+25.01.24-3,Anna,Orakel
+25.01.24-3,Domi,Weiser
+25.01.24-3,Lena,Hexe
+25.01.24-3,Lukas,Schlangenbeschwörer
+25.01.24-3,Michelle,Uhrmacher
+25.01.24-3,Roman,Tollpatsch
+28.01.24-1,Andreas Erb,Zombuul
+28.01.24-1,Domi,Glücksspieler
+28.01.24-1,Lena,Attentäter
+28.01.24-1,Marius,Mondkind
+28.01.24-1,Michelle,Tratschtante
+28.01.24-1,Roman,Narr
+28.01.24-1,Lena/Beccs,Minnesänger
+28.01.24-2,Andi Bender,Apprentice
+28.01.24-2,Andreas Erb,Professor
+28.01.24-2,Domi,Wahnsinniger
+28.01.24-2,Lena,Exorzist
+28.01.24-2,Marius,Pukka
+28.01.24-2,Michelle,Tee-Lady
+28.01.24-2,Roman,Tratschtante
+28.01.24-2,Lena/Beccs,Pate
+28.01.24-3,Andi Bender,Schlangenbeschwörer
+28.01.24-3,Andreas Erb,Jungfrau
+28.01.24-3,Domi,Tüftler
+28.01.24-3,Lena,Mondkind
+28.01.24-3,Lukas,Mohnzüchterin
+28.01.24-3,Marius,Pulverstenz
+28.01.24-3,Michelle,Al-Hadikhia
+28.01.24-3,Roman,Tratschtante
+28.01.24-3,Lena/Beccs,Kultführer
+28.01.24-4,Andreas Erb,Psychopath
+28.01.24-4,Lena,Golem
+28.01.24-4,Lukas,Glücksspieler
+28.01.24-4,Marius,Alchemist
+28.01.24-4,Michelle,Pou
+28.01.24-4,Roman,Kannibale
+28.01.24-4,Tim,Lykanthrop
+19.03.24-1,Andreas Erb,Schütze
+19.03.24-1,Anna,Imp
+19.03.24-1,Domi,Soldat
+19.03.24-1,Lena,Rabenwärter
+19.03.24-1,Marius,Frau in Rot
+19.03.24-1,Michelle,Einsiedler
+19.03.24-1,Roman,Wahrsagerin
+19.03.24-1,Lena/Beccs,Waschfrau
+19.03.24-2,Andreas Erb,Giftmischer
+19.03.24-2,Anna,Mönch
+19.03.24-2,Domi,Bestatter
+19.03.24-2,Lena,Bürgermeister
+19.03.24-2,Marius,Imp
+19.03.24-2,Michelle,Empath
+19.03.24-2,Roman,Betrunkener
+19.03.24-2,Lena/Beccs,Waschfrau
+19.03.24-3,Andi Bender,Einsiedler
+19.03.24-3,Andreas Erb,Wahrsagerin
+19.03.24-3,Domi,Imp
+19.03.24-3,Lena,Bestatter
+19.03.24-3,Lukas,Spion
+19.03.24-3,Marius,Jungfrau
+19.03.24-3,Michelle,Schütze
+19.03.24-3,Roman,Rabenwärter
+19.03.24-3,Lena/Beccs,Heiliger
+19.03.24-4,Andi Bender,Mondkind
+19.03.24-4,Andreas Erb,Tollpatsch
+19.03.24-4,Domi,Kultführer
+19.03.24-4,Lena,Aufruhr
+19.03.24-4,Lukas,Jungfrau
+19.03.24-4,Marius,Schlangenbeschwörer
+19.03.24-4,Michelle,Vergesslicher
+19.03.24-4,Roman,Adlige
+19.03.24-4,Lena/Beccs,Aufruhr
+16.04.24-1,Andi Bender,Petze
+16.04.24-1,Andreas Erb,Soldat
+16.04.24-1,Domi,Betrunkener
+16.04.24-1,Lena,Vergesslicher
+16.04.24-1,Marius,Baron
+16.04.24-1,Roman,Giftmischer
+16.04.24-1,Lena/Beccs,Empath
+16.04.24-2,Andi Bender,Fee
+16.04.24-2,Andreas Erb,Wahrsagerin
+16.04.24-2,Domi,Rabenwärter
+16.04.24-2,Lena,Vergesslicher
+16.04.24-2,Marius,Frau in Rot
+16.04.24-2,Michelle,Kannibale
+16.04.24-2,Roman,Bürgermeister
+16.04.24-2,Lena/Beccs,Imp
+16.04.24-3,Andreas Erb,Imp
+16.04.24-3,Domi,Vergesslicher
+16.04.24-3,Lena,Kannibale
+16.04.24-3,Michelle,Einsiedler
+16.04.24-3,Roman,Giftmischer
+16.04.24-3,Lena/Beccs,Empath
+16.04.24-3,Tim,Koch
+30.04.24-1,Andi Bender,Großmutter
+30.04.24-1,Anna,Pate
+30.04.24-1,Domi,Imp
+30.04.24-1,Lena,Herzblatt
+30.04.24-1,Michelle,Koch
+30.04.24-1,Roman,Schlangenbeschwörer
+30.04.24-1,Lena/Beccs,Philosoph
+30.04.24-2,Andi Bender,Träumer
+30.04.24-2,Anna,Fang Gu
+30.04.24-2,Domi,Vettel
+30.04.24-2,Lena,Glücksspieler
+30.04.24-2,Michelle,Vergesslicher
+30.04.24-2,Roman,Rabenwärter
+30.04.24-2,Lena/Beccs,Betrunkener | Böse
+30.04.24-3,Andi Bender,Cerenovus
+30.04.24-3,Anna,Philosoph
+30.04.24-3,Domi,Schlangenbeschwörer | Böse
+30.04.24-3,Lena,Ballonfahrer
+30.04.24-3,Michelle,Vigormortis | Gut
+30.04.24-3,Roman,Kannibale
+30.04.24-3,Lena/Beccs,Wahrsagerin
+04.06.24-1,Andi Bender,Adlige
+04.06.24-1,Andreas Erb,Tollpatsch
+04.06.24-1,Lena,Pou |Gut
+04.06.24-1,Marius,Attentäter
+04.06.24-1,Roman,Lykanthrop
+04.06.24-1,Lena/Beccs,Schlangenbeschwörer | Böse
+04.06.24-2,Andi Bender,Ermittler
+04.06.24-2,Andreas Erb,Rabenwärter
+04.06.24-2,Domi,Witwe
+04.06.24-2,Lena,Wahrsagerin
+04.06.24-2,Marius,Mutant
+04.06.24-2,Roman,Fang Gu
+04.06.24-2,Lena/Beccs,Kannibale
+04.06.24-3,Andi Bender,Pate
+04.06.24-3,Andreas Erb,Rabenwärter
+04.06.24-3,Domi,Philosoph
+04.06.24-3,Lena,Betrunkener
+04.06.24-3,Marius,Imp
+04.06.24-3,Michelle,Schlangenbeschwörer
+04.06.24-3,Roman,Koch
+04.06.24-4,Andi Bender,Shabaloth
+04.06.24-4,Andreas Erb,Glücksspieler
+04.06.24-4,Domi,Kopfgeldjäger
+04.06.24-4,Lena,Jungfrau
+04.06.24-4,Marius,Panikmacher
+04.06.24-4,Michelle,Tratschtante|Böse
+04.06.24-4,Roman,Schütze
+25.06.24-1,Andi Bender,No Dashii
+25.06.24-1,Andreas Erb,Rabenwärter
+25.06.24-1,Anna,Rätselmeister
+25.06.24-1,Lena,Orakel
+25.06.24-1,Marius,Soldat
+25.06.24-1,Michelle,Fee
+25.06.24-1,Roman,Empath
+25.06.24-1,Lena/Beccs,Giftmischer
+25.06.24-2,Andi Bender,Wahrsagerin
+25.06.24-2,Andreas Erb,Vettel
+25.06.24-2,Anna,Schlangenbeschwörer | Böse
+25.06.24-2,Lena,Vergesslicher
+25.06.24-2,Marius,Koch
+25.06.24-2,Michelle,Genie
+25.06.24-2,Roman,Vigormortis | Gut
+07.07.24-1,Andi Bender,Einsiedler
+07.07.24-1,Andreas Erb,Waschfrau
+07.07.24-1,Domi,Wahrsagerin
+07.07.24-1,Lena,Frau in Rot
+07.07.24-1,Marius,Betrunkener
+07.07.24-1,Roman,Bürgermeister
+07.07.24-1,Lena/Beccs,Imp
+07.07.24-1,Paul,Koch
+07.07.24-1,Michi,Mönch
+07.07.24-2,Andi Bender,Baron
+07.07.24-2,Andreas Erb,Schütze
+07.07.24-2,Domi,Bestatter
+07.07.24-2,Lena,Soldat
+07.07.24-2,Marius,Betrunkener
+07.07.24-2,Michelle,Imp
+07.07.24-2,Roman,Butler
+07.07.24-2,Lena/Beccs,Giftmischer
+07.07.24-2,Paul,Ermittler
+07.07.24-2,Michi,Jungfrau
+07.07.24-3,Andi Bender,Empath
+07.07.24-3,Andreas Erb,Heiliger
+07.07.24-3,Domi,Imp
+07.07.24-3,Lena,Wahrsagerin
+07.07.24-3,Marius,Giftmischer
+07.07.24-3,Michelle,Einsiedler
+07.07.24-3,Roman,Waschfrau
+07.07.24-3,Paul,Bürgermeister
+07.07.24-3,Michi,Rabenwärter
+23.07.24-1,Andi Bender,Imp
+23.07.24-1,Andreas Erb,Träumer
+23.07.24-1,Anna,Wahrsagerin
+23.07.24-1,Domi,Kannibale
+23.07.24-1,Lena,Schlangenbeschwörer
+23.07.24-1,Michelle,Vettel
+23.07.24-1,Roman,Wahnsinniger
+23.07.24-1,Lena/Beccs,Koch
+04.08.24-1,Andi Bender,Baron
+04.08.24-1,Anna,Rabenwärter
+04.08.24-1,Lena,Bestatter
+04.08.24-1,Michelle,Einsiedler
+04.08.24-1,Roman,Butler
+04.08.24-1,Lena/Beccs,Betrunkener
+04.08.24-1,Paul,Mönch
+04.08.24-1,Michi,Heiliger
+04.08.24-1,Sascha,Imp
+04.08.24-2,Andreas Erb,Rabenwärter
+04.08.24-2,Anna,Empath
+04.08.24-2,Domi,Waschfrau
+04.08.24-2,Lena,Baron
+04.08.24-2,Marius,Jungfrau
+04.08.24-2,Michelle,Schütze
+04.08.24-2,Roman,Bibliothekarin
+04.08.24-2,Lena/Beccs,Betrunkener
+04.08.24-2,Paul,Koch
+04.08.24-2,Michi,Einsiedler
+04.08.24-2,Gunnar,Imp
+04.08.24-2,Tim,Frau in Rot
+04.08.24-2,Sascha,Giftmischer
+04.08.24-3,Andreas Erb,Heiliger
+04.08.24-3,Anna,Imp
+04.08.24-3,Lena,Mönch
+04.08.24-3,Lukas,Spion
+04.08.24-3,Marius,Empath
+04.08.24-3,Roman,Soldat
+04.08.24-3,Lena/Beccs,Einsiedler
+04.08.24-3,Gunnar,Wahrsagerin
+04.08.24-3,Tim,Bestatter
+25.08.24-1,Andi Bender,Künstlerin
+25.08.24-1,Andreas Erb,Orakel
+25.08.24-1,Anna,Uhrmacher
+25.08.24-1,Domi,Träumer
+25.08.24-1,Lena,Weiser
+25.08.24-1,Michelle,No Dashii
+25.08.24-1,Roman,Barbier
+25.08.24-1,Lena/Beccs,Hexe
+25.08.24-1,Paul,Vettel
+25.08.24-1,Michi,Blumenmädchen
+25.08.24-1,Gunnar,Jongleur
+25.08.24-2,Andi Bender,Genie
+25.08.24-2,Andreas Erb,Stadtschreier
+25.08.24-2,Anna,Mathematiker
+25.08.24-2,Domi,Hexe
+25.08.24-2,Lena,Vortox
+25.08.24-2,Marius,Schneiderin
+25.08.24-2,Roman,Böser Zwilling
+25.08.24-2,Lena/Beccs,Schlangenbeschwörer
+25.08.24-2,Paul,Jongleur
+25.08.24-2,Michi,Blumenmädchen
+25.08.24-3,Andi Bender,Schneiderin
+25.08.24-3,Andreas Erb,Barbier
+25.08.24-3,Anna,Künstlerin
+25.08.24-3,Domi,Mathematiker
+25.08.24-3,Lena,Cerenovus
+25.08.24-3,Marius,Philosoph
+25.08.24-3,Roman,Herzblatt
+25.08.24-3,Paul,No Dashii
+25.08.24-3,Michi,Weiser
+25.08.24-4,Andreas Erb,Jungfrau
+25.08.24-4,Anna,Psychopath
+25.08.24-4,Domi,Kultführer
+25.08.24-4,Lena,Pou
+25.08.24-4,Marius,Glücksspieler
+25.08.24-4,Roman,Tratschtante
+25.08.24-4,Paul,Adlige
+25.08.24-4,Michi,Tüftler
+01.09.24-1,Andi Bender,Zombuul
+01.09.24-1,Andreas Erb,Pate
+01.09.24-1,Domi,Glücksspieler
+01.09.24-1,Lena,Mondkind
+01.09.24-1,Marius,Tee-Lady
+01.09.24-1,Roman,Exorzist
+01.09.24-1,Lena/Beccs,Tratschtante
+01.09.24-1,Paul,Kammermädchen
+01.09.24-1,Michi,Attentäter
+01.09.24-1,Gunnar,Minnesänger
+01.09.24-2,Andi Bender,Schankwirt
+01.09.24-2,Andreas Erb,Großmutter
+01.09.24-2,Domi,Teufels Anwalt
+01.09.24-2,Lena,Pazifist
+01.09.24-2,Marius,Schmeichler
+01.09.24-2,Roman,Pate
+01.09.24-2,Lena/Beccs,Exorzist
+01.09.24-2,Paul,Trottel
+01.09.24-2,Michi,Tratschtante
+01.09.24-2,Gunnar,Shabaloth
+01.09.24-3,Andi Bender,Wahrsagerin
+01.09.24-3,Andreas Erb,Imp
+01.09.24-3,Domi,Empath
+01.09.24-3,Lena,Frau in Rot
+01.09.24-3,Roman,Mönch
+01.09.24-3,Lena/Beccs,Giftmischer
+01.09.24-3,Paul,Rabenwärter
+01.09.24-3,Michi,Bibliothekarin
+01.09.24-3,Gunnar,Koch
+01.09.24-3,Tim,Bestatter
+01.09.24-4,Andi Bender,Spion
+01.09.24-4,Andreas Erb,Bibliothekarin
+01.09.24-4,Domi,Mönch
+01.09.24-4,Lena,Heiliger
+01.09.24-4,Roman,Empath
+01.09.24-4,Lena/Beccs,Giftmischer
+01.09.24-4,Paul,Waschfrau
+01.09.24-4,Michi,Imp
+01.09.24-4,Gunnar,Bestatter
+01.09.24-4,Tim,Koch
+01.09.24-5,Andi Bender,Soldat
+01.09.24-5,Andreas Erb,Rabenwärter
+01.09.24-5,Lena,Einsiedler
+01.09.24-5,Marius,Imp
+01.09.24-5,Roman,Koch
+01.09.24-5,Lena/Beccs,Heiliger
+01.09.24-5,Paul,Baron
+01.09.24-5,Michi,Giftmischer
+01.09.24-5,Gunnar,Bestatter
+01.09.24-5,Tim,Jungfrau
+15.09.24-1,Andi Bender,Soldat
+15.09.24-1,Andreas Erb,Bibliothekarin
+15.09.24-1,Anna,Frau in Rot
+15.09.24-1,Lena,Koch
+15.09.24-1,Marius,Empath
+15.09.24-1,Roman,Bestatter
+15.09.24-1,Lena/Beccs,Imp
+15.09.24-1,Paul,Schütze
+15.09.24-1,Michi,Waschfrau
+15.09.24-1,Annika,Einsiedler
+15.09.24-1,Robin,Giftmischer
+15.09.24-2,Andi Bender,Giftmischer
+15.09.24-2,Andreas Erb,Empath
+15.09.24-2,Anna,Einsiedler
+15.09.24-2,Lena,Betrunkener
+15.09.24-2,Marius,Wahrsagerin
+15.09.24-2,Roman,Bürgermeister
+15.09.24-2,Lena/Beccs,Butler
+15.09.24-2,Paul,Heiliger
+15.09.24-2,Michi,Baron
+15.09.24-2,Annika,Rabenwärter
+15.09.24-2,Robin,Mönch
+15.09.24-2,Tobias,Imp
+15.09.24-3,Andreas Erb,Rabenwärter
+15.09.24-3,Lena,Bibliothekarin
+15.09.24-3,Marius,Imp
+15.09.24-3,Roman,Betrunkener
+15.09.24-3,Paul,Jungfrau
+15.09.24-3,Michi,Schütze
+15.09.24-3,Annika,Spion
+15.09.24-3,Robin,Butler
+15.09.24-3,Tobias,Soldat
+22.09.24-1,Andreas Erb,Rabenwärter
+22.09.24-1,Anna,Betrunkener
+22.09.24-1,Lena,Imp
+22.09.24-1,Michelle,Bibliothekarin
+22.09.24-1,Roman,Schütze
+22.09.24-1,Lena/Beccs,Einsiedler
+22.09.24-1,Paul,Baron
+22.09.24-1,Michi,Heiliger
+22.09.24-1,Annika,Butler
+22.09.24-1,Robin,Wahrsagerin
+22.09.24-1,Tobias,Frau in Rot
+22.09.24-1,Hannes,Soldat
+22.09.24-2,Andreas Erb,Einsiedler
+22.09.24-2,Anna,Ermittler
+22.09.24-2,Lena,Heiliger
+22.09.24-2,Lukas,Empath
+22.09.24-2,Michelle,Imp
+22.09.24-2,Roman,Schütze
+22.09.24-2,Lena/Beccs,Betrunkener
+22.09.24-2,Paul,Spion
+22.09.24-2,Michi,Waschfrau
+22.09.24-2,Gunnar,Giftmischer
+22.09.24-2,Annika,Baron
+22.09.24-2,Robin,Bestatter
+22.09.24-2,Tobias,Rabenwärter
+22.09.24-2,Hannes,Soldat
+22.09.24-3,Andreas Erb,Kultführer
+22.09.24-3,Lena,Schlangenbeschwörer
+22.09.24-3,Lukas,Schütze
+22.09.24-3,Marius,Mondkind
+22.09.24-3,Roman,Psychopath
+22.09.24-3,Paul,Shabaloth
+22.09.24-3,Annika,Lykanthrop
+22.09.24-3,Robin,Tratschtante
+29.09.24-1,Andi Bender,Tratschtante
+29.09.24-1,Andreas Erb,Pukka
+29.09.24-1,Anna,Glücksspieler
+29.09.24-1,Lena,Großmutter
+29.09.24-1,Roman,Teufels Anwalt
+29.09.24-1,Lena/Beccs,Kammermädchen
+29.09.24-1,Paul,Tee-Lady
+29.09.24-1,Michi,Trottel
+29.09.24-1,Robin,Seemann
+29.09.24-1,Hannes,Pate
+29.09.24-2,Andi Bender,Pate
+29.09.24-2,Andreas Erb,Pou
+29.09.24-2,Anna,Professor
+29.09.24-2,Lena,Schmeichler
+29.09.24-2,Roman,Mondkind
+29.09.24-2,Lena/Beccs,Narr
+29.09.24-2,Paul,Kammermädchen
+29.09.24-2,Michi,Tee-Lady
+29.09.24-2,Tim,Schankwirt
+29.09.24-2,Robin,Tüftler
+29.09.24-2,Tobias,Attentäter
+29.09.24-2,Hannes,Wahnsinniger
+29.09.24-3,Andi Bender,Großmutter
+29.09.24-3,Andreas Erb,Mutant
+29.09.24-3,Lena,Imp | Gut
+29.09.24-3,Marius,Glücksspieler
+29.09.24-3,Roman,Pate
+29.09.24-3,Lena/Beccs,Rabenwärter
+29.09.24-3,Paul,Wahrsagerin
+29.09.24-3,Michi,Witwe
+29.09.24-3,Robin,Schlangenbeschwörer | Böse
+29.09.24-3,Tobias,Vergesslicher
+29.09.24-4,Andreas Erb,Adlige
+29.09.24-4,Lena,Tratschtante
+29.09.24-4,Marius,Tüftler
+29.09.24-4,Roman,Attentäter
+29.09.24-4,Lena/Beccs,Glücksspieler
+29.09.24-4,Paul,Kultführer
+29.09.24-4,Michi,Al-Hadikhia
+29.09.24-4,Robin,Mohnzüchterin
+29.09.24-4,Tobias,Mondkind
+06.10.24-1,Andi Bender,Dorfdepp
+06.10.24-1,Andreas Erb,Ojo
+06.10.24-1,Lena,General
+06.10.24-1,Roman,Pate
+06.10.24-1,Lena/Beccs,Exorzist
+06.10.24-1,Michi,Betrunkener
+06.10.24-1,Tobias,Dorfdepp
+06.10.24-2,Andi Bender,Nachtwächter
+06.10.24-2,Andreas Erb,Glücksspieler
+06.10.24-2,Lena,Kannibale | Böse
+06.10.24-2,Roman,Schankwirt
+06.10.24-2,Lena/Beccs,Beschwörer
+06.10.24-2,Michi,Exorzist
+06.10.24-2,Tobias,Soldat
+06.10.24-3,Andi Bender,Stadtschreier
+06.10.24-3,Andreas Erb,Fischer
+06.10.24-3,Lena,Maid
+06.10.24-3,Roman,Pukka
+06.10.24-3,Lena/Beccs,Minnesänger
+06.10.24-3,Paul,Attentäter
+06.10.24-3,Michi,Vergesslicher
+06.10.24-3,Tobias,Nachtwächter
+06.10.24-4,Andi Bender,Dorfdepp
+06.10.24-4,Andreas Erb,Glücksspieler
+06.10.24-4,Lena,Betrunkener
+06.10.24-4,Roman,Politiker
+06.10.24-4,Lena/Beccs,Yaggababble
+06.10.24-4,Paul,Dorfdepp
+06.10.24-4,Michi,Pate
+06.10.24-4,Tobias,Dorfdepp
+03.11.24-1,Andi Bender,Glücksspieler
+03.11.24-1,Andreas Erb,Professor
+03.11.24-1,Roman,Teufels Anwalt
+03.11.24-1,Lena/Beccs,Kammermädchen
+03.11.24-1,Paul,Pate
+03.11.24-1,Michi,Pukka
+03.11.24-1,Gunnar,Tüftler
+03.11.24-1,Robin,Tratschtante
+03.11.24-1,Tobias,Trottel
+03.11.24-1,Hannes,Mondkind
+03.11.24-1,Jane,Tee-Lady
+03.11.24-1,Kiwi,Minnesänger
+03.11.24-2,Andi Bender,Shabaloth
+03.11.24-2,Andreas Erb,Minnesänger
+03.11.24-2,Roman,Glücksspieler
+03.11.24-2,Lena/Beccs,Pazifist
+03.11.24-2,Paul,Professor
+03.11.24-2,Michi,Seemann
+03.11.24-2,Robin,Exorzist
+03.11.24-2,Tobias,Drahtzieher
+03.11.24-2,Hannes,Kammermädchen
+03.11.24-2,Jane,Attentäter
+03.11.24-3,Andreas Erb,Tratschtante
+03.11.24-3,Lena,Attentäter
+03.11.24-3,Marius,Schankwirt
+03.11.24-3,Roman,Professor
+03.11.24-3,Paul,Pou
+03.11.24-3,Michi,Pate
+03.11.24-3,Robin,Narr
+03.11.24-3,Tobias,Großmutter
+03.11.24-3,Jane,Glücksspieler
+03.11.24-3,Schmorres,Mondkind
+05.11.24-1,Andi Bender,Kannibale
+05.11.24-1,Andreas Erb,Maid
+05.11.24-1,Lena,Politiker
+05.11.24-1,Marius,Dorfdepp
+05.11.24-1,Lena/Beccs,Ojo
+05.11.24-1,Paul,Betrunkener
+05.11.24-1,Michi,Nachtwächter
+05.11.24-1,Robin,Pate
+05.11.24-1,Hannes,Dorfdepp
+05.11.24-2,Andi Bender,Fischer
+05.11.24-2,Andreas Erb,Stadtschreier
+05.11.24-2,Lena,Frau in Rot
+05.11.24-2,Lena/Beccs,Schütze
+05.11.24-2,Paul,Kannibale
+05.11.24-2,Michi,Pukka
+05.11.24-2,Tim,Maid
+05.11.24-2,Robin,General
+10.11.24-1,Andi Bender,Mathematiker
+10.11.24-1,Andreas Erb,Savant
+10.11.24-1,Lena,Mutant
+10.11.24-1,Marius,Blumenmädchen
+10.11.24-1,Roman,Uhrmacher
+10.11.24-1,Lena/Beccs,Jongleur
+10.11.24-1,Paul,Vortox
+10.11.24-1,Michi,Böser Zwilling
+10.11.24-1,Tobias,Schneiderin
+10.11.24-1,Hannes,Künstlerin
+10.11.24-1,Jane,Vettel
+10.11.24-1,Schmorres,Barbier
