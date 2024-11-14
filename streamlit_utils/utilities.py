@@ -1,6 +1,7 @@
 import json
 import streamlit as st
 import pandas as pd
+from st_files_connection import FilesConnection
 
 GAME_DATA = "stats/game_data.csv"
 PLAYER_ROLE_DATA = "stats/player_role_data.csv"
@@ -13,7 +14,8 @@ def get_image(role_name):
     return st.session_state.characters[role_name]["image"][0]
 
 def load_character_file(file_path):
-    with open(file_path, 'r', encoding='utf-8') as file:
+    conn = st.connection('gcs', type=FilesConnection)
+    with conn.open(f"botc_status_fulda/{file_path}", mode='r', encoding='utf-8') as file:
         data = json.load(file) 
     return data
 
@@ -39,7 +41,9 @@ def map_player_role_name(role):
 
 def load_game_data():
     try:
-        game_data = pd.read_csv(GAME_DATA)
+        conn = st.connection('gcs', type=FilesConnection)
+        with conn.open(f"botc_status_fulda/{GAME_DATA}", mode='r', encoding='utf-8') as file:
+            game_data = pd.read_csv(file)
         game_data["formatted_date"] = game_data["date"].apply(lambda x: f"20{x.split('.')[2]}-{x.split('.')[1]}-{x.split('.')[0]}")
     except Exception as e:
         print(e)
@@ -48,7 +52,10 @@ def load_game_data():
 
 def load_full_data(game_dataset):
     try:
-        player_role_data = pd.read_csv(PLAYER_ROLE_DATA)
+        conn = st.connection('gcs', type=FilesConnection)
+        with conn.open(f"botc_status_fulda/{PLAYER_ROLE_DATA}", mode='r', encoding='utf-8') as file:
+            player_role_data = pd.read_csv(file)
+        
     except Exception as e:
         print(e)
         return 

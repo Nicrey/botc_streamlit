@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from streamlit_utils.utilities import load_characters, load_full_data, load_game_data, login_player
 from streamlit_utils.filters import filter_kaboom, filter_teensies
-
+from st_files_connection import FilesConnection
 
 # @st.cache_data
 def hash_value(name):
@@ -24,11 +24,10 @@ def create_multiselect(name, dataframe, column):
     values = dataframe[column].unique().tolist()
     return st.multiselect(name,values,values)
 
-
-
 st.title("BOTC Fulda Stats")
 st.session_state.logged_in_player = ""
 st.session_state.characters = load_characters()
+
 with st.sidebar:
     filter_kaboom_check = st.checkbox("Filter Kaboom", True)
     filter_teensies_check = st.checkbox("Filter Teensies (< 7 Spieler)", True)
