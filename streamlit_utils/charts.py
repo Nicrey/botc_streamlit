@@ -2,6 +2,7 @@ from functools import wraps
 import random
 import streamlit as st
 import altair as alt
+import pandasql as ps
 
 GOOD_COLOR = '#007BB9'
 EVIL_COLOR = '#8C0E12'
@@ -194,3 +195,43 @@ def create_player_role_dist_chart(df):
     df["number_of_losses"] = df["number_of_games"] - df["number_of_wins"]
 
     st.bar_chart(data= df, x="role", y=["number_of_wins", "number_of_losses"], color=['#999999','#248B3C'])
+
+
+########################################################## Fun Facts ########################################################
+
+def get_winstreaks(df):
+    
+    df["id"] = df["formatted_date"] + df["number"].astype(str)
+        # Step 1: Calculate the "prev_win" column
+    df['prev_win'] = df['win'].shift(1)
+
+    df['next_win'] = df['win'].shift(-1)
+    df["is_ongoing"] = df.apply(
+        lambda row: row["next_win"] is None,
+        axis=1
+    )
+
+    # Step 2: Create the "streak_name" column to identify new streaks
+    df['streak_name'] = df.apply(
+        lambda row: row['id'] if row['win'] != row['prev_win'] else None,
+        axis=1
+    )
+
+    # Step 3: Fill down the "streak_name" to create the "streak" column
+    df['streak'] = df['streak_name'].ffill()
+
+    # Step 4: Aggregate by streak to compute streak details
+    aggregation = df.groupby('streak').agg(
+        streak_end_date=('formatted_date', 'max'),
+        streak_start_date=('formatted_date', 'min'),
+        streak_team=('win', 'first'),
+        streak_length=('id', 'size'),
+        is_ongoing=("is_ongoing", "any")
+    ).reset_index()
+
+        # Find the maximum streak for each team
+    longest_streaks = aggregation.loc[aggregation.groupby('streak_team')['streak_length'].idxmax()]
+
+    # Reset index for clarity (optional)
+    longest_streaks = longest_streaks.reset_index(drop=True)
+    return longest_streaks

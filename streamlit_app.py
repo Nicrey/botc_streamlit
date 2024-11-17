@@ -60,6 +60,7 @@ pg = st.navigation([
     st.Page("streamlit_utils/pages/single_role_page.py", title="Einzelrollenübersicht"),
     st.Page("streamlit_utils/pages/player_page.py", title="Spieler*innenübersicht"),
     st.Page("streamlit_utils/pages/single_player_page.py", title="Einzelspieler*innenübersicht"),
+    st.Page("streamlit_utils/pages/misc_page.py", title="Fun Facts"),
     
     ])
 pg.run()
