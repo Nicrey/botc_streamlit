@@ -1,9 +1,6 @@
 from functools import wraps
 import random
 import streamlit as st
-import altair as alt
-import pandasql as ps
-
 GOOD_COLOR = '#007BB9'
 EVIL_COLOR = '#8C0E12'
 TB_COLOR = '#880004'

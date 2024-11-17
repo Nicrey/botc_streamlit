@@ -6,6 +6,7 @@ from streamlit_utils.charts import get_winstreaks
 st.title("Fun Facts")
 
 game_data = st.session_state.game_data
+full_data = st.session_state.full_data
 
 st.divider()
 st.header("Längste Siegesserie")
@@ -33,3 +34,4 @@ if good_streak["is_ongoing"].tolist()[0]:
     col2.metric("Bis:", f"Heute")
 else:
     col2.metric("Bis:", f"{good_streak['streak_end_date'].tolist()[0]}")
+
