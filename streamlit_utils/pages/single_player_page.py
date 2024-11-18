@@ -125,15 +125,16 @@ with st.expander("Längste Serien", expanded=True):
 
     st.divider()
     col2.subheader("Siegesserie", divider="green")
-
-    col2.metric("Länge", f"{win_streak['streak_length'].tolist()[0]} Siege")
-    col2.metric("Von:", f"{win_streak['streak_start_date'].tolist()[0]}")
-    if win_streak["is_ongoing"].tolist()[0]:
-        col2.metric("Bis:", f"Heute")
-    else:
-        col2.metric("Bis:", f"{win_streak['streak_end_date'].tolist()[0]}")
-
-
+    try:
+        col2.metric("Länge", f"{win_streak['streak_length'].tolist()[0]} Siege")
+        col2.metric("Von:", f"{win_streak['streak_start_date'].tolist()[0]}")
+        if win_streak["is_ongoing"].tolist()[0]:
+            col2.metric("Bis:", f"Heute")
+        else:
+            col2.metric("Bis:", f"{win_streak['streak_end_date'].tolist()[0]}")
+    except Exception as e:
+        print(e)
+        col2.warning("Zu wenige Spiele")
 
 ##################################################### Rollenverteilung ############################################
 with st.expander("Rollenverteilung", expanded=True):
