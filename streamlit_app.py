@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from streamlit_utils.utilities import load_characters, load_full_data, load_game_data, login_player
-from streamlit_utils.filters import filter_kaboom, filter_teensies
+from streamlit_utils.filters import combine_tb, filter_kaboom, filter_teensies
 from st_files_connection import FilesConnection
 
 # @st.cache_data
@@ -24,13 +24,14 @@ def create_multiselect(name, dataframe, column):
     values = dataframe[column].unique().tolist()
     return st.multiselect(name,values,values)
 
-st.title("BOTC Fulda Stats")
+st.title("Blood on the Clocktower Statistiken (Fulda)")
 st.session_state.logged_in_player = ""
 st.session_state.characters = load_characters()
 
 with st.sidebar:
     filter_kaboom_check = st.checkbox("Filter Kaboom", True)
     filter_teensies_check = st.checkbox("Filter Teensies (< 7 Spieler)", True)
+    combine_tb_variants = st.checkbox("Trouble Brewing Varianten zusammenfassen", True)
     player_key = st.text_input("Spielerpasswort", "",type="password")
     if player_key:
         st.session_state.logged_in_player = login_player(player_key)
@@ -43,14 +44,16 @@ game_data, full_data = load_data()
 if filter_kaboom_check:
     game_data = filter_kaboom(game_data)
     full_data = filter_kaboom(full_data)
-
     
 if filter_teensies_check:
     game_data = filter_teensies(game_data)
     full_data = filter_teensies(full_data)
 
-st.session_state["game_data"] = game_data
+if combine_tb_variants:
+    game_data = combine_tb(game_data)
+    full_data = combine_tb(full_data)
 
+st.session_state["game_data"] = game_data
 st.session_state["full_data"] = full_data
 
 pg = st.navigation([

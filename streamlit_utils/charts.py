@@ -232,3 +232,40 @@ def get_winstreaks(df):
     # Reset index for clarity (optional)
     longest_streaks = longest_streaks.reset_index(drop=True)
     return longest_streaks
+
+
+def get_player_winstreaks(df):
+    df["id"] = df["formatted_date"] + df["number"].astype(str)
+        # Step 1: Calculate the "prev_win" column
+    df['prev_win'] = df.groupby("player")['player_result'].shift(1)
+
+    df['next_win'] = df.groupby("player")["player_result"].shift(-1)
+    df["is_ongoing"] = df.apply(
+        lambda row: row["next_win"] is None,
+        axis=1
+    )
+
+    # Step 2: Create the "streak_name" column to identify new streaks
+    df['streak_name'] = df.apply(
+        lambda row: row['id'] if row['player_result'] != row['prev_win'] else None,
+        axis=1
+    )
+
+    # Step 3: Fill down the "streak_name" to create the "streak" column
+    df['streak'] = df.groupby("player")['streak_name'].ffill()
+
+    # Step 4: Aggregate by streak to compute streak details
+    aggregation = df.groupby(['player','streak']).agg(
+        streak_end_date=('formatted_date', 'max'),
+        streak_start_date=('formatted_date', 'min'),
+        streak_team=('player_result', 'first'),
+        streak_length=('id', 'size'),
+        is_ongoing=("is_ongoing", "any")
+    ).reset_index()
+
+        # Find the maximum streak for each team
+    longest_streaks = aggregation.loc[aggregation.groupby(['player','streak_team'])['streak_length'].idxmax()]
+
+    # Reset index for clarity (optional)
+    longest_streaks = longest_streaks.reset_index(drop=True)
+    return longest_streaks

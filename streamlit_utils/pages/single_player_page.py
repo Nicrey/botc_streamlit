@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_utils.utilities import get_image
 from streamlit_app import create_multiselect
 from streamlit_utils.filters import filter_date_range, filter_value_list
-from streamlit_utils.charts import create_player_role_dist_chart, create_role_bar_chart, create_winrate_over_time_chart, create_winrate_over_time_chart_player, highlight_player_result
+from streamlit_utils.charts import create_player_role_dist_chart, create_role_bar_chart, create_winrate_over_time_chart, create_winrate_over_time_chart_player, get_player_winstreaks, highlight_player_result
 
 if not st.session_state.logged_in_player:
     st.warning("Nicht als Spieler eingeloggt, bitte Spielerpasswort eingeben")
@@ -91,6 +91,34 @@ col3.metric("Als Böse",f"{evil_wins} ({round(evil_wins/evil_games*100)} %)")
 
 st.subheader("Siegesrate über Zeit")
 create_winrate_over_time_chart_player(filtered_data)
+
+st.subheader("Längste Serien")
+longest_streaks = get_player_winstreaks(filtered_data)
+
+loss_streak = longest_streaks[longest_streaks["streak_team"] == "Loss"]
+win_streak = longest_streaks[longest_streaks["streak_team"] == "Win"]
+col1, col2 = st.columns(2)
+# col1,col2,col3,col4 = st.columns(4)
+col1.subheader("Niederlageserie", divider="gray")
+col1.metric("Länge", f"{loss_streak['streak_length'].tolist()[0]} Niederlagen")
+col1.metric("Von:", f"{loss_streak['streak_start_date'].tolist()[0]}")
+if loss_streak["is_ongoing"].tolist()[0]:
+    col1.metric("Bis:", f"Heute")
+else:
+    col1.metric("Bis:", f"{loss_streak['streak_end_date'].tolist()[0]}")
+
+st.divider()
+col2.subheader("Siegesserie", divider="green")
+
+col2.metric("Länge", f"{win_streak['streak_length'].tolist()[0]} Siege")
+col2.metric("Von:", f"{win_streak['streak_start_date'].tolist()[0]}")
+if win_streak["is_ongoing"].tolist()[0]:
+    col2.metric("Bis:", f"Heute")
+else:
+    col2.metric("Bis:", f"{win_streak['streak_end_date'].tolist()[0]}")
+
+
+
 st.subheader("Rollenverteilung")
 create_player_role_dist_chart(filtered_data)
 

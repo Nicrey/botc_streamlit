@@ -12,7 +12,8 @@ roles = full_data["role"].unique().tolist()
 role_select_r = st.selectbox("Rolle", roles, index=None, placeholder="Rolle Suchen oder Auswählen")
 filtered_role_data = full_data
 filtered_role_data = filter_value_list([role_select_r], "role", filtered_role_data)
-
+first_date = filtered_role_data["formatted_date"].min()
+last_date = filtered_role_data["formatted_date"].max()
 if role_select_r:
     col1, col2, col3, col4,col5 = st.columns([0.15,0.25,0.2, 0.2,0.25], vertical_alignment="center")
     col1.subheader("**Rolle:**")
@@ -22,7 +23,9 @@ if role_select_r:
     wins = (filtered_role_data["player_result"] == 'Win').sum()
     col4.metric("Siege", value=wins)
     col5.metric("Siegrate", value=f"{round(wins/games*100,2)} %")
-
+    col1,col2 = st.columns(2)
+    col1.metric("Zuerst gespielt", first_date)
+    col2.metric("Zuletzt gespielt", last_date)
 
 with st.expander("Filter", expanded=False):
     if not filtered_role_data.empty:
