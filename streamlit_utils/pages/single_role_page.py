@@ -1,8 +1,7 @@
 import streamlit as st
 
 from streamlit_utils.charts import create_role_bar_chart, create_role_rolling_winrate_chart, create_role_winrate_chart
-from streamlit_utils.utilities import get_image
-from streamlit_app import create_multiselect
+from streamlit_utils.utilities import create_multiselect, get_image
 from streamlit_utils.filters import filter_date_range, filter_value_list
 
 full_data = st.session_state.full_data

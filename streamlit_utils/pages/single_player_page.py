@@ -1,9 +1,8 @@
 import streamlit as st
 
-from streamlit_utils.utilities import get_image
-from streamlit_app import create_multiselect
+from streamlit_utils.utilities import create_multiselect, get_image
 from streamlit_utils.filters import filter_date_range, filter_value_list
-from streamlit_utils.charts import create_player_role_dist_chart, create_role_bar_chart, create_winrate_over_time_chart, create_winrate_over_time_chart_player, get_player_winstreaks, highlight_player_result
+from streamlit_utils.charts import create_player_role_dist_chart, create_role_bar_chart, create_winrate_over_time_chart_player, get_player_winstreaks, highlight_player_result, GOOD_COLOR, EVIL_COLOR
 
 if not st.session_state.logged_in_player:
     st.warning("Nicht als Spieler eingeloggt, bitte Spielerpasswort eingeben")
@@ -16,6 +15,8 @@ player = st.session_state.logged_in_player
 if player == "Tim":
     player = st.selectbox("Spielerauswahl", full_data["player"].unique().tolist())
 
+
+##################################################### Filter ############################################
 filtered_data = full_data[full_data["player"] == player]
 if filtered_data.empty:
     st.stop()
@@ -35,6 +36,9 @@ with st.expander("Filter", expanded=False):
         filtered_data = filter_date_range(date_select_r, "formatted_date", filtered_data)
 if filtered_data.empty:
     st.stop()
+
+
+##################################################### General Stats ############################################
 games = len(filtered_data.index)
 wins = (filtered_data["player_result"] == "Win").sum()
 win_rate = wins/games
@@ -44,132 +48,146 @@ col1.metric("Statistiken für", player)
 col2.metric("Spiele", games)
 col3.metric("Siege", wins)
 col4.metric("Siegesrate", f"{round(wins/games*100,2)} %")
-st.subheader("Rohdaten")
-dataframe_data = filtered_data[["date", "role", "player_result", "team", "script", "storyteller", "playercount"]]
-styled_df = dataframe_data.style.apply(highlight_player_result, axis=1)
-st.dataframe(styled_df, use_container_width=True, hide_index=True)
 
-st.subheader("Gespielte Skripte")
-create_role_bar_chart(df=filtered_data, column="script")
+##################################################### Styled Raw Data ############################################
+with st.expander("Rohdaten", expanded=True):
+    dataframe_data = filtered_data[["date", "role", "player_result", "team", "script", "storyteller", "playercount"]]
+    styled_df = dataframe_data.style.apply(highlight_player_result, axis=1)
+    st.dataframe(styled_df, use_container_width=True, hide_index=True)
 
-st.subheader("Sonstige Statistiken")
+##################################################### Gespielte Skripte ############################################
+with st.expander("Gespielte Skripte", expanded=True):
+    create_role_bar_chart(df=filtered_data, column="script")
 
-st.subheader("Ziehrate")
-col1,col2,col3,col4 = st.columns(4)
+##################################################### Draw/Winrates ############################################
 
-town_games = (filtered_data["role_type"] == "townsfolk").sum()
-outsider_games = (filtered_data["role_type"] == "outsider").sum()
-minion_games = (filtered_data["role_type"] == "minion").sum()
-demon_games = (filtered_data["role_type"] == "demon").sum()
-demon_games = 0 if not demon_games else demon_games
+with st.expander("Zieh und Siegesrate", expanded=True):
+    st.subheader("Ziehrate")
+    col1,col2, col3 = st.columns([0.2,0.3,0.3])
+    col1.subheader("Rollentyp", divider="violet")
+    col2.subheader("Spiele (Ziehrate)", divider="rainbow")
+    col3.subheader("Siege (Siegesrate)", divider="green")
 
-good_games = town_games + outsider_games
-evil_games = minion_games + demon_games
-col1.metric("Bürger", f"{town_games} ({round(town_games/games*100)} %)")
-col2.metric("Aussenseiter", f"{outsider_games} ({round(outsider_games/games*100)} %)")
-col3.metric("Scherge", f"{minion_games} ({round(minion_games/games*100)} %)")
-col4.metric("Dämon", f"{demon_games} ({round(demon_games/games*100)} %)")
-col2.metric("Gut", f"{good_games} ({round(good_games/games*100)} %)")
-col3.metric("Böse", f"{evil_games} ({round(evil_games/games*100)} %)")
+    rate_idx = ["townsfolk", "outsider", "minion", "demon", "good", "evil"]
+    german = ["Bürger", "Aussenseiter", "Scherge", "Dämon", "Gut", "Böse"]
+    colors = ["blue", "blue", "red", "red", "blue", "red"]
+    game_count = {}
+    game_rate = {}
+    win_count = {}
+    win_rate = {}
+    col1.markdown(f"#### Gesamt:")
+    col2.metric("Gesamt", games, label_visibility="collapsed")
+    col3.metric("Gesamt", wins, label_visibility="collapsed")
+    st.divider()
+    for i,idx in enumerate(rate_idx):
+        if idx == "good":
+            st.divider()
+            game_count[idx] = game_count["townsfolk"] + game_count["outsider"]
+            win_count[idx] = win_count["townsfolk"] + win_count["outsider"]
+        elif idx == "evil":
+            game_count[idx] = game_count["minion"] + game_count["demon"]
+            win_count[idx] = win_count["minion"] + win_count["demon"]
+        else:
+            game_count[idx] = (filtered_data["role_type"] == idx).sum()
+            win_count[idx] = ((filtered_data["role_type"] == idx) & (filtered_data["player_result"] == "Win")).sum()
+        game_count[idx] = game_count[idx] if game_count[idx] else 0
+        win_count[idx] = win_count[idx] if win_count[idx] else 0
 
-st.subheader("Siegesrate")
-col1,col2,col3,col4 = st.columns(4)
-town_wins = ((filtered_data["role_type"] == "townsfolk") & (filtered_data["player_result"] == "Win")).sum()
-outsider_wins = ((filtered_data["role_type"] == "outsider") & (filtered_data["player_result"] == "Win")).sum()
-minion_wins = ((filtered_data["role_type"] == "minion") & (filtered_data["player_result"] == "Win")).sum()
-demon_wins = ((filtered_data["role_type"] == "demon") & (filtered_data["player_result"] == "Win")).sum()
-demon_wins = 0 if not demon_wins else demon_wins
-good_wins = town_wins + outsider_wins
-evil_wins = minion_wins + demon_wins
-col1.metric("Als Bürger", f"{town_wins} ({round(town_wins/town_games*100)} %)")
-col2.metric("Als Aussenseiter", f"{outsider_wins} ({round(outsider_wins/outsider_games*100)} %)")
-col3.metric("Als Scherge", f"{minion_wins} ({round(minion_wins/minion_games*100)} %)")
-if demon_games > 0:
-    col4.metric("Als Dämon", f"{demon_wins} ({round(demon_wins/demon_games*100)} %)")
-col2.metric("Als Gut",f"{good_wins} ({round(good_wins/good_games*100)} %)")
-col3.metric("Als Böse",f"{evil_wins} ({round(evil_wins/evil_games*100)} %)")
+        win_rate[idx] = round(win_count[idx]/game_count[idx] * 100)
+        game_rate[idx] = round(game_count[idx] / games * 100)
 
-st.subheader("Siegesrate über Zeit")
-create_winrate_over_time_chart_player(filtered_data)
-
-st.subheader("Längste Serien")
-longest_streaks = get_player_winstreaks(filtered_data)
-
-loss_streak = longest_streaks[longest_streaks["streak_team"] == "Loss"]
-win_streak = longest_streaks[longest_streaks["streak_team"] == "Win"]
-col1, col2 = st.columns(2)
-# col1,col2,col3,col4 = st.columns(4)
-col1.subheader("Niederlageserie", divider="gray")
-col1.metric("Länge", f"{loss_streak['streak_length'].tolist()[0]} Niederlagen")
-col1.metric("Von:", f"{loss_streak['streak_start_date'].tolist()[0]}")
-if loss_streak["is_ongoing"].tolist()[0]:
-    col1.metric("Bis:", f"Heute")
-else:
-    col1.metric("Bis:", f"{loss_streak['streak_end_date'].tolist()[0]}")
-
-st.divider()
-col2.subheader("Siegesserie", divider="green")
-
-col2.metric("Länge", f"{win_streak['streak_length'].tolist()[0]} Siege")
-col2.metric("Von:", f"{win_streak['streak_start_date'].tolist()[0]}")
-if win_streak["is_ongoing"].tolist()[0]:
-    col2.metric("Bis:", f"Heute")
-else:
-    col2.metric("Bis:", f"{win_streak['streak_end_date'].tolist()[0]}")
+        col1,col2,col3 = st.columns([0.2,0.3,0.3])
+        col1.markdown(f"#### :{colors[i]}[{german[i]}]")
+        col2.metric(label=f"Als {german[i]}", value=f"{game_count[idx]} ({game_rate[idx]} %)", label_visibility="collapsed")
+        col3.metric(label=f"Als {german[i]}",value=f"{win_count[idx]} ({win_rate[idx]} %)", label_visibility="collapsed")
 
 
-
-st.subheader("Rollenverteilung")
-create_player_role_dist_chart(filtered_data)
-
-st.subheader("Noch nie gespielte Rollen")
-
-role_type_map = {
-    "Bürger": "townsfolk", 
-    "Aussenseiter": "outsider", 
-    "Scherge": "minion", 
-    "Dämon": "demon"
-}
-role_types = role_type_map.keys()
-type_sel = st.multiselect("Rollentyp",role_types , default=role_types)
-
-origin_map ={
-    "Experimental": "experimental",
-    "Trouble Brewing": "tb", 
-    "Bad Moon Rising": "bmr", 
-    "Sects and Violets": "snv"
-}
-scripts = origin_map.keys()
-origin_sel = st.multiselect("Herkunft", scripts, scripts)
+##################################################### Winrate over Time ############################################
+with st.expander("Siegesrate über Zeit", expanded=True):
+    create_winrate_over_time_chart_player(filtered_data)
 
 
-used_roles = full_data[full_data["player"] == player]["role"].unique().tolist()
-unused_roles = []
-for character in st.session_state.characters.values():
-  
-    if "edition" not in character:
-        continue
-    if "team" not in character:
-        continue
-    if character["team"] not in [role_type_map[t] for t in type_sel]:
-        continue
-    if character["edition"] not in [origin_map[o] for o in origin_sel]:
-        continue
+##################################################### Serien ############################################
+with st.expander("Längste Serien", expanded=True):
+    longest_streaks = get_player_winstreaks(filtered_data)
 
-    if character["name"] not in used_roles:
-        unused_roles.append(character["name"])
+    loss_streak = longest_streaks[longest_streaks["streak_team"] == "Loss"]
+    win_streak = longest_streaks[longest_streaks["streak_team"] == "Win"]
+    col1, col2 = st.columns(2)
+    # col1,col2,col3,col4 = st.columns(4)
+    col1.subheader("Niederlageserie", divider="gray")
+    col1.metric("Länge", f"{loss_streak['streak_length'].tolist()[0]} Niederlagen")
+    col1.metric("Von:", f"{loss_streak['streak_start_date'].tolist()[0]}")
+    if loss_streak["is_ongoing"].tolist()[0]:
+        col1.metric("Bis:", f"Heute")
+    else:
+        col1.metric("Bis:", f"{loss_streak['streak_end_date'].tolist()[0]}")
 
-col1, col2 = st.columns(2)
-with col1:
-    st.metric("Nie gespielte Rollen", len(unused_roles))
-with col2:
-    st.metric("Gespielte Rollen", len(used_roles))
-columns = []
-for i in range(int(len(unused_roles)/4)+1):
-    columns += st.columns(4)
+    st.divider()
+    col2.subheader("Siegesserie", divider="green")
 
-for col, char in zip(columns, unused_roles):
-    col.image(get_image(char), caption=char, width=120)
+    col2.metric("Länge", f"{win_streak['streak_length'].tolist()[0]} Siege")
+    col2.metric("Von:", f"{win_streak['streak_start_date'].tolist()[0]}")
+    if win_streak["is_ongoing"].tolist()[0]:
+        col2.metric("Bis:", f"Heute")
+    else:
+        col2.metric("Bis:", f"{win_streak['streak_end_date'].tolist()[0]}")
+
+
+
+##################################################### Rollenverteilung ############################################
+with st.expander("Rollenverteilung", expanded=True):
+    create_player_role_dist_chart(filtered_data)
+
+
+##################################################### Noch nie gespielte Rollen ############################################
+with st.expander("Noch nie gespielte Rollen", expanded=True):
+    role_type_map = {
+        "Bürger": "townsfolk", 
+        "Aussenseiter": "outsider", 
+        "Scherge": "minion", 
+        "Dämon": "demon"
+    }
+    role_types = role_type_map.keys()
+    type_sel = st.multiselect("Rollentyp",role_types , default=role_types)
+
+    origin_map ={
+        "Experimental": "experimental",
+        "Trouble Brewing": "tb", 
+        "Bad Moon Rising": "bmr", 
+        "Sects and Violets": "snv"
+    }
+    scripts = origin_map.keys()
+    origin_sel = st.multiselect("Herkunft", scripts, scripts)
+
+
+    used_roles = full_data[full_data["player"] == player]["role"].unique().tolist()
+    unused_roles = []
+    for character in st.session_state.characters.values():
+    
+        if "edition" not in character:
+            continue
+        if "team" not in character:
+            continue
+        if character["team"] not in [role_type_map[t] for t in type_sel]:
+            continue
+        if character["edition"] not in [origin_map[o] for o in origin_sel]:
+            continue
+
+        if character["name"] not in used_roles:
+            unused_roles.append(character["name"])
+
+    col1, col2 = st.columns(2)
+    with col1:
+        st.metric("Nie gespielte Rollen", len(unused_roles))
+    with col2:
+        st.metric("Gespielte Rollen", len(used_roles))
+    columns = []
+    for i in range(int(len(unused_roles)/4)+1):
+        columns += st.columns(4)
+
+    for col, char in zip(columns, unused_roles):
+        col.image(get_image(char), caption=char, width=120)
 
 
 

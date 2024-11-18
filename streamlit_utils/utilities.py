@@ -7,7 +7,6 @@ GAME_DATA = "stats/game_data.csv"
 PLAYER_ROLE_DATA = "stats/player_role_data.csv"
 
 def login_player(password):
-    
     return st.secrets.player_passwords.get(password, "")
 
 def get_image(role_name):
@@ -72,3 +71,21 @@ def load_full_data(game_dataset):
     full_dataset = player_role_data.merge(game_dataset, how='left', on='gameid')
     full_dataset["player_result"] = full_dataset.apply((lambda x: "Win" if x["win"] == x["team"] else "Loss"),axis=1)
     return full_dataset
+
+def hash_value(name):
+    if not st.session_state.logged_in_player:
+        return "***"
+    return name
+
+def load_data():
+    game_data = load_game_data()
+    full_data = load_full_data(game_data)
+    if not st.session_state.logged_in_player:
+        game_data["storyteller"] = game_data["storyteller"].apply(hash_value)
+        full_data["storyteller"] = full_data["storyteller"].apply(hash_value)
+    full_data["player"] = full_data["player"].apply(hash_value)
+    return game_data, full_data
+
+def create_multiselect(name, dataframe, column):
+    values = dataframe[column].unique().tolist()
+    return st.multiselect(name,values,values)

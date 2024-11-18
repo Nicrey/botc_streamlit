@@ -86,7 +86,7 @@ df = df[columns]
 
 df = df[df["games"] >= min_games]
 
-st.dataframe(df, use_container_width=True)
+# st.dataframe(df, use_container_width=True)
 
 selection = st.pills("Darstellung", columns[1:], selection_mode="multi")
 st.bar_chart(df, x="player", y=selection, stack=False)

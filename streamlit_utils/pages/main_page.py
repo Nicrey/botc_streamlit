@@ -1,11 +1,10 @@
 import streamlit as st
 
-from streamlit_app import create_multiselect, load_data
 from streamlit_utils.charts import create_bar_chart, create_gamecount_charts, create_grouped_winrate_chart, create_playercount_over_time_chart, create_script_line_chart, create_winrate_over_time_chart
 from streamlit_utils.filters import filter_date_range, filter_value_list
+from streamlit_utils.utilities import create_multiselect
 
 game_data = st.session_state.game_data
-
 
 col1, col2, col3 = st.columns(3)
 games = len(game_data.index)

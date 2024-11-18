@@ -1,8 +1,6 @@
 import streamlit as st
-from streamlit_utils.utilities import get_image
-from streamlit_app import create_multiselect, load_data
-from streamlit_utils.data_utils import get_aggregated_role_data
-from streamlit_utils.filters import filter_date_range, filter_range, filter_value_list
+from streamlit_utils.utilities import create_multiselect, get_image
+from streamlit_utils.filters import filter_date_range, filter_range, filter_value_list, get_aggregated_role_data
 
 full_data = st.session_state.full_data
 

@@ -1,33 +1,12 @@
 import streamlit as st
-import pandas as pd
-from streamlit_utils.utilities import load_characters, load_full_data, load_game_data, login_player
+from streamlit_utils.utilities import load_characters, load_data, login_player
 from streamlit_utils.filters import combine_tb, filter_kaboom, filter_teensies
-from st_files_connection import FilesConnection
 
-# @st.cache_data
-def hash_value(name):
-    if not st.session_state.logged_in_player:
-        return "***"
-    return name
-
-# @st.cache_data
-def load_data():
-    game_data = load_game_data()
-    full_data = load_full_data(game_data)
-    if not st.session_state.logged_in_player:
-        game_data["storyteller"] = game_data["storyteller"].apply(hash_value)
-        full_data["storyteller"] = full_data["storyteller"].apply(hash_value)
-    full_data["player"] = full_data["player"].apply(hash_value)
-    return game_data, full_data
-
-def create_multiselect(name, dataframe, column):
-    values = dataframe[column].unique().tolist()
-    return st.multiselect(name,values,values)
-
-st.title("Blood on the Clocktower Statistiken (Fulda)")
+st.title("Blood on the Clocktower Statistiken")
 st.session_state.logged_in_player = ""
 st.session_state.characters = load_characters()
 
+############################ SIDEBAR ###########################
 with st.sidebar:
     filter_kaboom_check = st.checkbox("Filter Kaboom", True)
     filter_teensies_check = st.checkbox("Filter Teensies (< 7 Spieler)", True)
@@ -39,6 +18,8 @@ with st.sidebar:
     if st.session_state.logged_in_player:
         st.write(f"Willkommen {st.session_state.logged_in_player}!")
 
+
+############################ DATA LOADING ###########################
 game_data, full_data = load_data()
 
 if filter_kaboom_check:
@@ -56,6 +37,8 @@ if combine_tb_variants:
 st.session_state["game_data"] = game_data
 st.session_state["full_data"] = full_data
 
+
+############################ NAVIGATION ###########################
 pg = st.navigation([
     st.Page("streamlit_utils/pages/main_page.py", title="Allgemein"),
     st.Page("streamlit_utils/pages/role_page.py", title="Rollenübersicht"),
