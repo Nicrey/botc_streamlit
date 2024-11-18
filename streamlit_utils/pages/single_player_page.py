@@ -116,12 +116,16 @@ with st.expander("Längste Serien", expanded=True):
     col1, col2 = st.columns(2)
     # col1,col2,col3,col4 = st.columns(4)
     col1.subheader("Niederlageserie", divider="gray")
-    col1.metric("Länge", f"{loss_streak['streak_length'].tolist()[0]} Niederlagen")
-    col1.metric("Von:", f"{loss_streak['streak_start_date'].tolist()[0]}")
-    if loss_streak["is_ongoing"].tolist()[0]:
-        col1.metric("Bis:", f"Heute")
-    else:
-        col1.metric("Bis:", f"{loss_streak['streak_end_date'].tolist()[0]}")
+    try:
+        col1.metric("Länge", f"{loss_streak['streak_length'].tolist()[0]} Niederlagen")
+        col1.metric("Von:", f"{loss_streak['streak_start_date'].tolist()[0]}")
+        if loss_streak["is_ongoing"].tolist()[0]:
+            col1.metric("Bis:", f"Heute")
+        else:
+            col1.metric("Bis:", f"{loss_streak['streak_end_date'].tolist()[0]}")
+    except Exception as e:
+        print(e)
+        col2.warning("Zu wenige Spiele")
 
     st.divider()
     col2.subheader("Siegesserie", divider="green")
