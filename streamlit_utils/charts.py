@@ -111,9 +111,12 @@ def create_role_bar_chart(df, column):
 @valid_chart_check
 def create_role_winrate_chart(df, column):
     column = PARAMETER_TO_COLUMN_MAP[column] if column in PARAMETER_TO_COLUMN_MAP else column
-    grouped_wins = df.groupby([column, 'player_result']).size().unstack(fill_value=0).reset_index()
-    st.bar_chart(grouped_wins, x=column, y=["Win", "Loss"], color=[EVIL_COLOR, GOOD_COLOR], stack="normalize")
-
+    try:
+        grouped_wins = df.groupby([column, 'player_result']).size().unstack(fill_value=0).reset_index()
+        st.bar_chart(grouped_wins, x=column, y=["Win", "Loss"], color=[EVIL_COLOR, GOOD_COLOR], stack="normalize")
+    except Exception as e:
+        st.warning("Zu wenige Spiele")
+        
 @valid_chart_check
 def create_role_rolling_winrate_chart(df):
         # Step 1: Group by 'date' and 'winner' to get the count of wins for each team
