@@ -93,7 +93,7 @@ with st.expander("Zieh und Siegesrate", expanded=True):
         game_count[idx] = game_count[idx] if game_count[idx] else 0
         win_count[idx] = win_count[idx] if win_count[idx] else 0
 
-        win_rate[idx] = round(win_count[idx]/game_count[idx] * 100)
+        win_rate[idx] = round(win_count[idx]/game_count[idx] * 100) if game_count[idx] > 0 else 0
         game_rate[idx] = round(game_count[idx] / games * 100)
 
         col1,col2,col3 = st.columns([0.2,0.3,0.3])
