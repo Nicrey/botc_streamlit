@@ -6,9 +6,17 @@ from streamlit_utils.filter_elements import apply_filters, create_filters
 
 game_data = st.session_state.game_data
 
+###################################################### FILTER ###############################################
+
+with st.expander("Filter"):
+    filters = create_filters(["Skript", "Erzähler", "Spieleranzahl", "Datum"], game_data)
+filtered_game_data = apply_filters(filters, game_data)
+
+####################################################### Metriken #################################
+
 col1, col2, col3 = st.columns(3)
-games = len(game_data.index)
-good_wins = (game_data['win'] == 'Gut').sum()
+games = len(filtered_game_data.index)
+good_wins = (filtered_game_data['win'] == 'Gut').sum()
 evil_wins = games - good_wins
 with col1:
     st.metric("Gespielte Spiele", games)
@@ -18,19 +26,14 @@ with col3:
     st.metric("Böse Siege", f"{evil_wins} ({round(evil_wins/games * 100,2)}%)")
 
 with col1:
-    st.metric("Erstes Spieldatum", game_data["formatted_date"].min())
+    st.metric("Erstes Spieldatum", filtered_game_data["formatted_date"].min())
 with col2:
-    st.metric("Letztes Spieldatum", game_data["formatted_date"].max())
+    st.metric("Letztes Spieldatum", filtered_game_data["formatted_date"].max())
 with col3:
-    st.metric("Spieltermine", game_data['formatted_date'].nunique())
-
-###################################################### FILTER ###############################################
-
-with st.expander("Filter"):
-    filters = create_filters(["Skript", "Erzähler", "Spieleranzahl", "Datum"], game_data)
-filtered_game_data = apply_filters(filters, game_data)
+    st.metric("Spieltermine", filtered_game_data['formatted_date'].nunique())
 
 ####################################################### Charts #################################
+
 with st.expander(label="**Siege nach Team**", expanded=True):
     create_bar_chart(filtered_game_data)
 
