@@ -1,14 +1,19 @@
 import streamlit as st
-
+from streamlit_utils.filter_elements import apply_filters, create_filters, create_multiselect, create_range_slider
 from streamlit_utils.charts import create_role_bar_chart, create_role_rolling_winrate_chart, create_role_winrate_chart
-from streamlit_utils.utilities import create_multiselect, get_image
-from streamlit_utils.filters import filter_date_range, filter_value_list
+from streamlit_utils.utilities import get_image
+from streamlit_utils.filters import filter_value_list
 
 full_data = st.session_state.full_data
 
+########################################################## Role Selection & metrics ###############################################
 st.subheader("Rollenübersicht (Siege/Spiele)")
-roles = full_data["role"].unique().tolist()
+
+# Role overview
+roles = sorted(full_data["role"].unique().tolist())
 role_select_r = st.selectbox("Rolle", roles, index=None, placeholder="Rolle Suchen oder Auswählen")
+
+# Metrics
 filtered_role_data = full_data
 filtered_role_data = filter_value_list([role_select_r], "role", filtered_role_data)
 first_date = filtered_role_data["formatted_date"].min()
@@ -26,16 +31,13 @@ if role_select_r:
     col1.metric("Zuerst gespielt", first_date)
     col2.metric("Zuletzt gespielt", last_date)
 
+########################################################## Filter ###############################################
 with st.expander("Filter", expanded=False):
     if not filtered_role_data.empty:
-        st_select_r = create_multiselect("Erzähler ", filtered_role_data, "storyteller")
-        player_count_select_r = create_multiselect("Spieleranzahl ", filtered_role_data, "playercount")
-        date_select_r = st.select_slider("Datum ", filtered_role_data["formatted_date"], value=(filtered_role_data["formatted_date"].min(),filtered_role_data["formatted_date"].max() ))
+        filters = create_filters(["Erzähler", "Spieleranzahl", "Datum"], filtered_role_data)
+        filtered_role_data = apply_filters(filters, filtered_role_data)
 
-        for filter, column in zip([st_select_r, player_count_select_r], ["storyteller", "playercount"]):
-            filtered_role_data = filter_value_list(filter, column, filtered_role_data)
-        filtered_role_data = filter_date_range(date_select_r, "formatted_date", filtered_role_data)
-
+######################################################## CHARTS ###############################################
 with st.expander("Vorkommen nach Datum", expanded=True):
     create_role_bar_chart(filtered_role_data, "formatted_date")
 
@@ -46,7 +48,6 @@ with st.expander("Vorkommen nach X", expanded=True):
 with st.expander("Siegrate nach X", expanded=True):
     group_select_2 = st.pills("Gruppieren nach:", ["Skript", "Erzähler", "Spieleranzahl"], default='Skript')
     create_role_winrate_chart(filtered_role_data, group_select_2)
-# Filter Rolle mit Suchfunktion?
 
 with st.expander("Siegrate über Zeit", expanded=True):
     create_role_rolling_winrate_chart(filtered_role_data)

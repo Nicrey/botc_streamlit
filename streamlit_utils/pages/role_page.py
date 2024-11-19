@@ -1,34 +1,18 @@
 import streamlit as st
-from streamlit_utils.utilities import create_multiselect, get_image
-from streamlit_utils.filters import filter_date_range, filter_range, filter_value_list, get_aggregated_role_data
+from streamlit_utils.filter_elements import apply_filters, create_filters
+from streamlit_utils.utilities import get_image
+from streamlit_utils.filters import filter_range, filter_value_list, get_aggregated_role_data
 
 full_data = st.session_state.full_data
 
 
 st.subheader("Rollenübersicht (Siege/Spiele)")
+###################################################### FILTER ##############################################
 with st.expander("Filter", expanded=False):
-    script_select_r = create_multiselect("Script ", full_data, "script")
-    st_select_r = create_multiselect("Erzähler ", full_data, "storyteller")
-    player_count_select_r = create_multiselect("Spieleranzahl ", full_data, "playercount")
-    date_select_r = st.select_slider("Datum ", full_data["formatted_date"], value=(full_data["formatted_date"].min(),full_data["formatted_date"].max() ))
-
-    role_type_map = {
-        "Bürger": "townsfolk", 
-        "Aussenseiter": "outsider", 
-        "Scherge": "minion", 
-        "Dämon": "demon"
-    }
-    role_types = role_type_map.keys()
-    type_sel = st.multiselect("Rollentyp",role_types , default=role_types)
-    type_select = [role_type_map[t] for t in type_sel]
-
-
-    filtered_role_data = full_data
-    for filter, column in zip([script_select_r, st_select_r, player_count_select_r, type_select], ["script", "storyteller", "playercount", "role_type"]):
-        filtered_role_data = filter_value_list(filter, column, filtered_role_data)
-    filtered_role_data = filter_date_range(date_select_r, "formatted_date", filtered_role_data)
+    filters = create_filters(["Skript", "Erzähler", "Spieleranzahl", "Datum", "Rollentyp"], full_data)
+    filtered_role_data = apply_filters(filters, full_data)
+ 
     
-
     aggregated_role_data = get_aggregated_role_data(filtered_role_data)
 
     if not aggregated_role_data.empty:
@@ -45,6 +29,7 @@ with st.expander("Filter", expanded=False):
 
         aggregated_role_data = filter_range(game_count_select, "number_of_games", aggregated_role_data)
 
+######################################################## Images and Overview #################################################
 columns = []
 for i in range(int(len(aggregated_role_data.index)/3)+1):
     columns += st.columns(3)

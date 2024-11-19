@@ -14,7 +14,6 @@ def filter_date_range(values, column, df):
 def filter_range(values, column, df):
     return filter_date_range(values, column, df)
 
-
 def combine_tb(df):
     tb_variants = ["TB", "TB+", "TB++","TB+Mario", "Tb+Amne"]
     df["script"] = df.apply(

@@ -85,7 +85,3 @@ def load_data():
         full_data["storyteller"] = full_data["storyteller"].apply(hash_value)
     full_data["player"] = full_data["player"].apply(hash_value)
     return game_data, full_data
-
-def create_multiselect(name, dataframe, column):
-    values = dataframe[column].unique().tolist()
-    return st.multiselect(name,values,values)

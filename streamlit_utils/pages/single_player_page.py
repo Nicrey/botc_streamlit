@@ -1,7 +1,6 @@
 import streamlit as st
-
-from streamlit_utils.utilities import create_multiselect, get_image
-from streamlit_utils.filters import filter_date_range, filter_value_list
+from streamlit_utils.filter_elements import apply_filters, create_filters
+from streamlit_utils.utilities import get_image
 from streamlit_utils.charts import create_player_role_dist_chart, create_role_bar_chart, create_winrate_over_time_chart_player, get_player_winstreaks, highlight_player_result, GOOD_COLOR, EVIL_COLOR
 
 if not st.session_state.logged_in_player:
@@ -22,21 +21,10 @@ if filtered_data.empty:
     st.stop()
 with st.expander("Filter", expanded=False):
     if not filtered_data.empty:
-        script_select_r = create_multiselect("Script ", filtered_data, "script")
-        st_select_r = create_multiselect("Erzähler ", filtered_data, "storyteller")
-        team_select = create_multiselect("Team ", filtered_data, "team")
-        type_select = create_multiselect("Rollentyp", filtered_data, "role_type")
-        role_select = create_multiselect("Rolle", filtered_data, "role")
-        
-        player_count_select_r = create_multiselect("Spieleranzahl ", filtered_data, "playercount")
-        date_select_r = st.select_slider("Datum ", filtered_data["formatted_date"], value=(filtered_data["formatted_date"].min(),filtered_data["formatted_date"].max() ))
-
-        for filter, column in zip([st_select_r, player_count_select_r, script_select_r, team_select, type_select, role_select], ["storyteller", "playercount", "script", "team", "role_type", "role"]):
-            filtered_data = filter_value_list(filter, column, filtered_data)
-        filtered_data = filter_date_range(date_select_r, "formatted_date", filtered_data)
+        filters = create_filters(["Skript", "Erzähler", "Spieleranzahl", "Datum", "Team", "Rollentyp", "Rolle"], filtered_data)
+        filtered_data = apply_filters(filters, filtered_data)
 if filtered_data.empty:
     st.stop()
-
 
 ##################################################### General Stats ############################################
 games = len(filtered_data.index)

@@ -1,8 +1,8 @@
 import streamlit as st
 
 from streamlit_utils.charts import create_bar_chart, create_gamecount_charts, create_grouped_winrate_chart, create_playercount_over_time_chart, create_script_line_chart, create_winrate_over_time_chart
-from streamlit_utils.filters import filter_date_range, filter_value_list
-from streamlit_utils.utilities import create_multiselect
+
+from streamlit_utils.filter_elements import apply_filters, create_filters
 
 game_data = st.session_state.game_data
 
@@ -24,21 +24,13 @@ with col2:
 with col3:
     st.metric("Spieltermine", game_data['formatted_date'].nunique())
 
-game_filter = st.expander("Filter")
-with game_filter:
-    script_select = create_multiselect("Script", game_data, "script")
-    st_select = create_multiselect("Erzähler", game_data, "storyteller")
-    player_count_select = create_multiselect("Spieleranzahl", game_data, "playercount")
-    date_select = st.select_slider("Datum", game_data["formatted_date"], value=(game_data["formatted_date"].min(),game_data["formatted_date"].max() ))
+###################################################### FILTER ###############################################
 
-filtered_game_data = game_data
-for filter, column in zip([script_select, st_select, player_count_select], ["script", "storyteller", "playercount"]):
-    filtered_game_data = filter_value_list(filter, column, filtered_game_data)
-filtered_game_data = filter_date_range(date_select, "formatted_date", filtered_game_data)
+with st.expander("Filter"):
+    filters = create_filters(["Skript", "Erzähler", "Spieleranzahl", "Datum"], game_data)
+filtered_game_data = apply_filters(filters, game_data)
 
-
-col1 = filtered_game_data["formatted_date"].unique()
-
+####################################################### Charts #################################
 with st.expander(label="**Siege nach Team**", expanded=True):
     create_bar_chart(filtered_game_data)
 
