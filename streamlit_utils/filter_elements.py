@@ -18,7 +18,7 @@ def create_range_slider(name, df, column):
     min = df[column].min()
     max = df[column].max()
     if min == max:
-        return Filter(name, column, st.select_slider(name, df[column], value=min))
+        return Filter(name, column, [min,max])
     else:
         return Filter(name, column, st.select_slider(name, df[column], value=(min, max)))
     
