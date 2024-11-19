@@ -4,7 +4,7 @@ from streamlit_utils.utilities import get_image
 from streamlit_utils.charts import create_player_role_dist_chart, create_role_bar_chart, create_winrate_over_time_chart_player, get_player_winstreaks, highlight_player_result, GOOD_COLOR, EVIL_COLOR
 
 if not st.session_state.logged_in_player:
-    st.warning("Nicht als Spieler eingeloggt, bitte Spielerpasswort eingeben")
+    st.warning("Nur für eingeloggte Spieler*innen sichtbar. Spielerpasswort bei Tim erfragen :)")
     st.stop()
 
 st.subheader("Einzelspieler*innenübersicht")

@@ -4,7 +4,7 @@ from streamlit_utils.data_transformations import full_data_to_player_data
 from streamlit_utils.filter_elements import apply_filters, create_filters
 
 if not st.session_state.logged_in_player:
-    st.warning("Bitte einloggen :)")
+    st.warning("Nur für eingeloggte Spieler*innen sichtbar. Spielerpasswort bei Tim erfragen :)")
     st.stop()
 
 st.subheader("Spieler*innenübersicht")

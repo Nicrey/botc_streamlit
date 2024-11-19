@@ -8,10 +8,12 @@ st.session_state.characters = load_characters()
 
 ############################ SIDEBAR ###########################
 with st.sidebar:
+    st.subheader("Globale Filter", divider="rainbow")
     filter_kaboom_check = st.checkbox("Filter Kaboom", True)
     filter_teensies_check = st.checkbox("Filter Teensies (< 7 Spieler)", True)
     combine_tb_variants = st.checkbox("Trouble Brewing Varianten zusammenfassen", True)
-    player_key = st.text_input("Spielerpasswort", "",type="password")
+    st.subheader("Spieler-Login", help="Spielerpasswort bei Tim erfragen. Passwort eingeben und Enter drücken, um Spieler*innenstatistiken zu sehen.", divider="rainbow")
+    player_key = st.text_input("Spielerpasswort", "",type="password", label_visibility="collapsed")
     if player_key:
         st.session_state.logged_in_player = login_player(player_key)
 
@@ -39,15 +41,22 @@ st.session_state["full_data"] = full_data
 
 
 ############################ NAVIGATION ###########################
-pg = st.navigation([
-    st.Page("streamlit_utils/pages/main_page.py", title="Allgemein"),
-    st.Page("streamlit_utils/pages/role_page.py", title="Rollenübersicht"),
-    st.Page("streamlit_utils/pages/never_used_roles.py", title="Nie benutzte Rollen"),
-    st.Page("streamlit_utils/pages/single_role_page.py", title="Einzelrollenübersicht"),
-    st.Page("streamlit_utils/pages/player_page.py", title="Spieler*innenübersicht"),
-    st.Page("streamlit_utils/pages/single_player_page.py", title="Einzelspieler*innenübersicht"),
-    st.Page("streamlit_utils/pages/misc_page.py", title="Fun Facts"),
+pages= {
+    "Allgemein": [
+        st.Page("streamlit_utils/pages/main_page.py", title="Allgemein"),
+        st.Page("streamlit_utils/pages/misc_page.py", title="Fun Facts")
+    ],
+    "Rollen": [
+        st.Page("streamlit_utils/pages/role_page.py", title="Übersicht"),
+        st.Page("streamlit_utils/pages/never_used_roles.py", title="Nie benutzte Rollen"),
+        st.Page("streamlit_utils/pages/single_role_page.py", title="Einzelübersicht"),
     
-    ])
+    ],
+    "Spieler*innen": [
+        st.Page("streamlit_utils/pages/player_page.py", title="Übersicht"),
+        st.Page("streamlit_utils/pages/single_player_page.py", title="Einzelübersicht"),
+    ]
+}
+pg = st.navigation(pages)
 pg.run()
 
