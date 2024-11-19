@@ -11,7 +11,11 @@ st.subheader("Rollenübersicht (Siege/Spiele)")
 
 # Role overview
 roles = sorted(full_data["role"].unique().tolist())
-role_select_r = st.selectbox("Rolle", roles, index=None, placeholder="Rolle Suchen oder Auswählen")
+
+role_select_r = st.selectbox("Rolle", roles, index=None, placeholder="Rolle Suchen oder Auswählen", key="role_select")
+
+if st.session_state.clicked_role and role_select_r is None: 
+    role_select_r =st.session_state.clicked_role
 
 # Metrics
 filtered_role_data = full_data

@@ -1,2 +1,3 @@
 st-files-connection
 gcsfs
+st-clickable-images
