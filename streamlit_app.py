@@ -8,10 +8,6 @@ st.session_state.characters = load_characters()
 
 ############################ SIDEBAR ###########################
 with st.sidebar:
-    st.subheader("Globale Filter", divider="rainbow")
-    filter_kaboom_check = st.checkbox("Filter Kaboom", True)
-    filter_teensies_check = st.checkbox("Filter Teensies (< 7 Spieler)", True)
-    combine_tb_variants = st.checkbox("Trouble Brewing Varianten zusammenfassen", True)
     st.subheader("Spieler-Login", help="Spielerpasswort bei Tim erfragen. Passwort eingeben und Enter drücken, um Spieler*innenstatistiken zu sehen.", divider="rainbow")
     player_key = st.text_input("Spielerpasswort", "",type="password", label_visibility="collapsed")
     if player_key:
@@ -19,6 +15,11 @@ with st.sidebar:
 
     if st.session_state.logged_in_player:
         st.write(f"Willkommen {st.session_state.logged_in_player}!")
+        
+    st.subheader("Globale Filter", divider="rainbow")
+    filter_kaboom_check = st.checkbox("Filter Kaboom", True)
+    filter_teensies_check = st.checkbox("Filter Teensies (< 7 Spieler)", True)
+    combine_tb_variants = st.checkbox("Trouble Brewing Varianten zusammenfassen", True)
 
 
 ############################ DATA LOADING ###########################
@@ -44,7 +45,8 @@ st.session_state["full_data"] = full_data
 pages= {
     "Allgemein": [
         st.Page("streamlit_utils/pages/main_page.py", title="Allgemein"),
-        st.Page("streamlit_utils/pages/misc_page.py", title="Fun Facts")
+        st.Page("streamlit_utils/pages/misc_page.py", title="Fun Facts"),
+        st.Page("streamlit_utils/pages/script_page.py", title="Skripte")
     ],
     "Rollen": [
         st.Page("streamlit_utils/pages/role_page.py", title="Übersicht"),

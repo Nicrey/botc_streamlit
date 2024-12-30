@@ -3,6 +3,8 @@ import streamlit as st
 import pandas as pd
 from st_files_connection import FilesConnection
 
+from streamlit_utils.objects.script import Script
+
 GAME_DATA = "stats/game_data.csv"
 PLAYER_ROLE_DATA = "stats/player_role_data.csv"
 
@@ -30,6 +32,18 @@ def load_characters():
         character["image"] = [character["image"], ""]
     character_dict = {character["name"]: character for character in characters}
     return character_dict
+
+@st.cache_data
+def load_scripts():
+    conn = st.connection('gcs', type=FilesConnection)
+    scripts = []
+    for file in conn.fs.ls("botc_status_fulda/scripts"):
+        if file.endswith(".json"):
+            with conn.open(f"{file}", mode='r', encoding='utf-8') as file:
+                data = json.load(file) 
+                scripts.append(Script(data, str(file)))
+    return scripts
+
 
 def map_player_role_name(role):
     with open("data/name_mapping.json", 'r', encoding='utf-8') as file:
