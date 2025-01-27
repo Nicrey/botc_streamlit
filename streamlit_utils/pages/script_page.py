@@ -36,7 +36,7 @@ for i,script in enumerate(scripts):
     if filtered:
         continue
     name, author, roles,download = st.columns(4)
-    name.text(script.name)
+    name.html(f'<a href="../single_script_page/?script={script.name}">{script.name}</a>')
     author.text(script.author)
     popover = roles.popover("Rollen")
     for role_list in [script.town, script.outsider, script.minion, script.demon]:

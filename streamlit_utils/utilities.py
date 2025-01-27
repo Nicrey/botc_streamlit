@@ -99,3 +99,32 @@ def load_data():
         full_data["storyteller"] = full_data["storyteller"].apply(hash_value)
     full_data["player"] = full_data["player"].apply(hash_value)
     return game_data, full_data
+
+def get_english_name(german_name):
+    remappings = {
+        "fortuneteller": "Fortune_Teller",
+        "snakecharmer": "Snake_Charmer",
+        "town_crier": "Town_Crier",
+        "tea_lady": "Tea_Lady",
+        "devils_advocate": "Devil's_Advocate",
+        "pit-hag": "Pit-Hag",
+        "scarletwoman": "Scarlet_Woman",
+        "evil_twin": "Evil_Twin",
+        "no_dashii": "No_Dashii",
+        "fanggu": "Fang_Gu",
+        "bountyhunter": "Bounty_Hunter",
+        "cult_leader": "Cult_Leader",
+        "highpriestess": "High_Priestess",
+        "villageidiot": "Village_Idiot",
+        "poppygrower": "Poppy_Grower",
+        "plaguedoctor": "Plague_Doctor",
+        "organ_grinder": "Organ_Grinder",
+        "alhadikhia": "Al-Hadikhia",
+        "lilmonsta": "Lil'_Monsta",
+        "lordoftyphon" :"Lord_of_Typhon"
+    }
+    english_name = st.session_state.characters[german_name]["id"].replace("de_DE_", "")
+    return remappings.get(english_name, english_name)
+
+def get_role_text(german_name):
+    return st.session_state.characters[german_name]["ability"]

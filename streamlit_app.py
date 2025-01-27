@@ -46,7 +46,8 @@ pages= {
     "Allgemein": [
         st.Page("streamlit_utils/pages/main_page.py", title="Allgemein"),
         st.Page("streamlit_utils/pages/misc_page.py", title="Fun Facts"),
-        st.Page("streamlit_utils/pages/script_page.py", title="Skripte")
+        st.Page("streamlit_utils/pages/script_page.py", title="Skripte"),
+        st.Page("streamlit_utils/pages/single_script_page.py", title="Skript-Details")
     ],
     "Rollen": [
         st.Page("streamlit_utils/pages/role_page.py", title="Übersicht"),
